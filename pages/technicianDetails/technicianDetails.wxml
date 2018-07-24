@@ -1,0 +1,32 @@
+<!--pages/technicianDetails/technicianDetails.wxml-->
+<view class='container'>
+  <view class='head'>
+    <image class='head_img' src='{{jishi.headUrl}}'></image>
+    <view class='name'>{{jishi.nickName}}</view>
+    <view class='job'>{{jishi.staffTypeName}}</view>
+  </view>
+  <view class='store' bindtap='openMap'>
+   <view class='store_all'>
+        <view class='store_name'>{{storeName}}</view>
+        <view class='location' bindtap='getlocation'>
+          <image class='location_img' src='../../images/home_location.png'></image>
+          {{coordinateAdress}}</view>
+      </view>
+      <view class='store_location'>
+        <view class='store_open'>正在营业</view>
+        <view class='far'>{{distance}}</view>
+      </view>
+  </view>
+  <view class='skills'>
+    <block wx:for="{{skill}}">
+      <view class='skill_one' hidden="{{index >= 5||item.isEnable==0}}">{{item.name}}</view>
+    </block>
+    <view class='more' wx:if="{{skill.length >= 6}}"  bindtap='gohisService'>...</view>
+  </view>
+  <view class='hisService' bindtap='gohisService'>他的服务 
+    <image class='more_go'  src='../../images/enter_btn.png'>go</image>
+  </view>
+  <view class='jieshao'>
+  {{jishi.detail}}</view>
+  <view class='hrefodder' bindtap='addorder'>预约</view>
+</view>

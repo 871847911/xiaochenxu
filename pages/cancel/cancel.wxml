@@ -1,0 +1,30 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+
+<form bindsubmit="submit" report-submit='true'>
+  <view class='container'>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}" color='#EC4B26' />{{item.value}}
+      </label>
+    </radio-group>
+    <block wx:if="{{isShow}}">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder-style="color:#C4C4C4;font-size:30rpx" placeholder="请输入取消原因，限制100个字" maxlength="100" bindblur="bindTextAreaBlur" />
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{validate}}">
+      <view class='validate'>原因内容不可不填</view>
+    </block>
+    <view wx:if="{{submit}}">
+      <button class='submit' form-type="submit"  hover-class="btn-hover" >提交</button>
+    </view>
+    <view wx:else>
+      <button class='disabled'  disabled='' hover-class="btn-hover">提交</button>
+    </view>
+    <view wx:if="{{popu}}" class='popu'>提交成功</view>
+  </view>
+</form>

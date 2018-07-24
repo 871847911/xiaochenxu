@@ -1,0 +1,79 @@
+<!--pages/order/order.wxml-->
+<view class='container'>
+  <view class='picknum'>
+    <block wx:for="{{people}}" class="picknum" wx:key="1">
+      <view class="num {{customerNumber==index+1? 'fen':''}}" data-id='{{index+1}}' bindtap='chosenum' name="bt1">{{index+1}}人</view>
+    </block>
+  </view>
+  <view class='name_phone'>
+    <view class='name_tx'>
+      姓名
+      <input class='name' placeholder="请输入姓名" confirm-type="done" bindinput='bipName' maxlength='10' value='{{name}}'></input>
+    </view>
+    <view class='phone_text'>
+      手机号
+      <input class='phone' placeholder="请输入手机号码" confirm-type="done" type='number' bindinput='bipPhone' maxlength='11' value='{{phone}}'></input>
+    </view>
+
+  </view>
+  <view class='mid'>
+    <view class='now_store'>
+    <image class='store_img' src='../../images/order_shop.png'></image>
+    {{storeName}}</view>
+    <view class='chose_one'>
+      <view class='sure_one'>{{jishiName}}</view>
+      <view class='to_chose' bindtap='chose_technician'>选择技师
+        <image class='goto' src='../../images/enter_btn.png'></image>
+      </view>
+    </view>
+    <view class='chose_one'>
+      <view class='sure_one'>{{serverName}}</view>
+      <view class='to_chose' bindtap='gotoService'>选择服务
+        <image class='goto' src='../../images/enter_btn.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='choseBox'>
+  <view class='check_text'>允许非指定技师为您服务</view>
+      <checkbox class='check' bindtap='change' checked='true'></checkbox>
+      
+  </view>
+  
+  <view class='chose_time' bindtap="setModalStatus" data-status="1">
+    <view class='text_time'>时间</view> 
+  <!-- {{serviceDate}} -->
+   <view class='serviceDate'>
+    <view class='year'>{{year}}</view>
+    <view class='nowtime'>{{chosetimes}}</view>
+    <view class='week'>{{week}}</view>
+   </view>   
+  </view>
+
+  <view class='needtime' wx:if="{{serviceTime !=''}}">所选服务预计{{serviceTime}}分钟</view>
+  <button class='rightnow' bindtap='order' wx:if="{{make==null}}">立即预约</button>
+  <button class='rightnow' bindtap='changeOrder' wx:else>修改预约</button>
+  <view class="drawer_screen" bindtap="setModalStatus" data-status="0" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+    <view class="drawer_attr_content">
+      <view class='text'>请选择服务时间 
+        <image class='down' src='../../images/down.png' bindtap="setModalStatus" data-status="0" wx:if="{{showModalStatus}}"></image>
+      </view>
+      <view class='service_day'>
+
+        <scroll-view scroll-x="true">
+          <block wx:for="{{serviceDay}}" wx:for-item="page" wx:key="*this">
+            <view class="date_day {{index == chosedate ? 'hui':''}}" style='display:inline-block;width:200rpx' bindtap='chose_date' data-id="{{index}}">{{page.week}}
+        <view class='date_year'>{{page.date}}</view>
+            </view>
+          </block>
+        </scroll-view>
+
+      </view>
+      <view class='day_time'>
+        <view wx:for="{{day}}" class="day_times {{index == chosetime ? 'fen':''}}" data-id="{{index}}" bindtap='chose_time' hidden='{{chosedate ==0 && hours>= item }}'>{{item}}:00-{{item+1}}:00</view>
+      </view>
+    </view>
+  </view>
+
+   </view>

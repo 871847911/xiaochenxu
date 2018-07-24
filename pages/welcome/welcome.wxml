@@ -1,0 +1,10 @@
+<!--pages/welcome/welcome.wxml-->
+<view class='container'>
+  <view class='logo'>
+    <image class='logo_img' src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'></image>
+  </view>
+  <view class='store_name'>商铺名字上面铺名字</view>
+
+ <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='bt'> 进入商铺 </button>
+ <!-- wx:if="{{!hasUserInfo && canIUse}} -->
+</view>

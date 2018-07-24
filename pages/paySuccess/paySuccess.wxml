@@ -1,0 +1,8 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+
+<view class='container'>
+  <image class='paySuc' src='../../images/succed.png'>支付成功</image> 
+  <text class='suc_text'>支付成功</text>
+  <view class='price'>￥0</view>
+  <button class='return' bindtap='go'>返回首页</button>
+</view>

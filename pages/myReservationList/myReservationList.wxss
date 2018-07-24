@@ -1,0 +1,65 @@
+/* pages/paySuccess/paySuccess.wxss */
+.header{
+  height: 92rpx;
+  background:rgba(236,75,38,1);
+  padding: 0 32rpx;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 92rpx;
+}
+.main{
+  background: #fff;
+}
+.textBox{
+  padding: 32rpx 32rpx;
+  overflow: hidden;
+}
+.text_l{
+  width: 212rpx;
+  float: left;
+  font-size: 26rpx;
+  color: #777777;
+}
+.text_r{
+  width: 474rpx;
+  font-size: 26rpx;
+  color: #1E1E1E;
+  float: left;
+  word-wrap:break-word;
+}
+.bottonBox{
+  width: 686rpx;
+  padding: 18rpx 32rpx;
+  background:rgba(255,255,255,1);
+  border:1rpx solid rgba(232,232,236,1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+button{
+  width:328rpx;
+  height:78rpx;
+  border-radius:8rpx;
+  background: #fff;
+  font-size: 26rpx;
+  line-height: 78rpx;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+.bt_l{
+  border:1rpx solid rgba(196,196,196,1);
+  color: #777;
+  margin-right: 30rpx;
+}
+.bt_r{
+  border:1rpx solid rgba(236,75,38,1);
+  color: #EC4B26;
+}
+button::after{
+  border: none;
+}
+.red{
+  background:rgba(241,161,142,1);
+}

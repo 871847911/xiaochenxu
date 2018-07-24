@@ -1,0 +1,12 @@
+<view class='store' >
+  <view class='store_all'>
+    <view class='store_name'>美甲</view>
+    <view class='location' bindtap='getlocation'>杭州市滨江区滨江大道555号</view>
+  </view>
+
+  <view class='store_location'>
+    <view class='store_open'>正在营业</view>
+    <view class='far'>123.3km</view>
+  </view>
+  
+ </view>

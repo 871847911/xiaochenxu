@@ -1,0 +1,38 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+
+<view class='container'>
+  <view class='header {{state=="已完成"||"已取消"?"red":""}}'>{{state}}</view>
+  <view class='main'>
+    <view class='textBox'>
+      <text class='text_l'>预约人数</text>
+      <text class='text_r'>{{customerNumber}}人</text>
+    </view>
+    <view class='textBox'>
+      <text class='text_l'>预约人信息</text>
+      <text class='text_r'>姓名 {{userName}}</text>
+    </view>
+    <view class='textBox'>
+      <text class='text_l'>预约技师</text>
+      <text class='text_r'>{{staffName}}</text>
+    </view>
+    <view class='textBox'>
+      <text class='text_l'>预约服务</text>
+      <text class='text_r'>{{serverName}}</text>
+    </view>
+    <view class='textBox'>
+      <text class='text_l'>预约时间</text>
+      <text class='text_r'>{{startTime}}</text>
+    </view>
+    <view class='textBox'wx:if="{{wyhCancel}}">
+      <text class='text_l'>取消原因</text>
+      <text class='text_r'>{{cancelReason}}</text>
+    </view>
+  </view>
+  <block wx:if="{{cancel}}">
+    <view class='bottonBox'>
+      <button class='bt_l' bindtap='clickCancel'>取消预约</button>
+      <button class='bt_r' bindtap='changreser'>修改预约</button>
+    </view>
+  </block>
+
+</view>

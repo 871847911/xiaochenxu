@@ -1,0 +1,152 @@
+/* pages/paySuccess/paySuccess.wxss */
+.store-box{
+  width: 100%;
+ position: fixed;
+  z-index: 3;
+}
+.store {
+  display: block;
+  overflow: hidden;
+  font-size: 26rpx;
+  background: rgba(255, 255, 255, 1);
+  padding: 32rpx 32rpx;
+  border-top: 1rpx solid rgba(232, 232, 236, 1);
+  border-bottom: 1rpx solid rgba(232, 232, 236, 1);
+ 
+}
+
+.store_all {
+  float: left;
+}
+
+.store_location {
+  float: right;
+}
+
+.store_name {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.location {
+  font-size: 30rpx;
+  color: #777;
+  margin-top: 10rpx;
+}
+
+.location_img {
+  width: 20rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  margin-top: -6rpx;
+}
+
+.store_location {
+  margin-top: 8rpx;
+  margin-left: 86rpx;
+}
+
+.far {
+  font-size: 26rpx;
+  color: #777;
+  text-align: right;
+  margin-top: 10rpx;
+}
+
+.enter {
+  height: 26rpx;
+  width: 14rpx;
+}
+
+.store_open {
+  font-size: 26rpx;
+  color: #1e1e1e;
+}
+
+.nav_box {
+  overflow: hidden;
+  height: 90rpx;
+  background: #fff;
+  border-bottom: 1rpx solid rgba(232, 232, 236, 1);
+}
+
+.nav_left {
+  float: left;
+  width: 138rpx;
+  height: 90rpx;
+  font-size: 26rpx;
+  color: #ec4b26;
+  line-height: 90rpx;
+  padding-left: 32rpx;
+  position: relative;
+}
+
+.mainBox {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  margin: 32rpx 0;
+  position: relative;
+  border-top:1rpx solid rgba(232,232,236,1);
+  border-bottom:1rpx solid rgba(232,232,236,1);
+}
+
+.weui-cell {
+  padding: 32rpx;
+}
+
+.name {
+  font-size: 34rpx;
+  color: #1e1e1e;
+}
+
+.skills {
+  margin: 0 32rpx;
+  overflow: hidden;
+}
+
+.skill_one {
+  font-size: 24rpx;
+  color: #ec4b26;
+  border-radius: 39rpx;
+  border: 1rpx solid rgba(236, 75, 38, 1);
+  float: left;
+  text-align: center;
+  width: 200rpx;
+  margin: 0 12rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  margin-bottom: 32rpx;
+  white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+
+}
+
+.more {
+  font-size: 24rpx;
+  color: #ec4b26;
+  border-radius: 39rpx;
+  border: 1rpx solid rgba(236, 75, 38, 1);
+  float: left;
+  text-align: center;
+  width: 200rpx;
+  margin: 0 12rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  margin-bottom: 32rpx;
+}
+
+.bnt {
+  width: 152rpx;
+  height: 72rpx;
+  background: rgba(236, 75, 38, 1);
+  border-radius: 4rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 72rpx;
+  position: absolute;
+  top: 40rpx;
+  right: 32rpx;
+}

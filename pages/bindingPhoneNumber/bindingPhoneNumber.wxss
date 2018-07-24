@@ -1,0 +1,126 @@
+/* pages/paySuccess/paySuccess.wxss */
+
+.container {
+  position: relative;
+}
+
+.weui-label {
+  font-size: 30rpx;
+  color: #777;
+}
+
+input::-webkit-input-placeholder {
+  color: #c4c4c4;
+}
+
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #c4c4c4;
+}
+
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #c4c4c4;
+}
+
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #c4c4c4;
+}
+
+.weui-cell {
+  padding: 12rpx 32rpx;
+}
+
+.weui-cell__hd {
+  width: 140rpx;
+}
+
+.weui-input {
+  font-size: 30rpx;
+}
+
+.weui-vcode-btn {
+  width: 166rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 26rpx;
+  color: #ec4b26;
+  border-radius: 4rpx;
+  border: 1rpx solid rgba(236, 75, 38, 1);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background: #fff;
+}
+.vcodeblack{
+  border:1rpx solid rgba(119,119,119,1);
+  background: #fff;
+  color: #777777;
+  font-size: 26rpx;
+}
+
+.weui-vcode-btn:active {
+  color: #ec4b26;
+}
+.vcodeblack:active{
+  color: #777777;
+}
+.weui-cells {
+  position: relative;
+}
+
+.validate {
+  position: absolute;
+  bottom: -50rpx;
+  left: 32rpx;
+  font-size: 26rpx;
+  color: #f00;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.submit {
+  width: 686rpx;
+  height: 98rpx;
+  background: #ec4b26;
+  border-radius: 8rpx;
+  font-size: 34rpx;
+  color: #fff;
+  line-height: 98rpx;
+  margin: 0 auto;
+  margin-top: 120rpx;
+  text-align: center;
+}
+
+.true {
+  background: #f1a18e;
+}
+
+.popu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -49px;
+  margin-left: -241rpx;
+  width: 482rpx;
+  height: 98rpx;
+  background: rgba(0, 0, 0, 0.598);
+  border-radius: 8rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 98rpx;
+  z-index: 3;
+}
+botton{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}

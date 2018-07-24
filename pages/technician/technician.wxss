@@ -1,0 +1,70 @@
+/* pages/technician/technician.wxss */
+
+.oneperson{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height:180rpx;
+background:rgba(255,255,255,1);
+border:1rpx solid rgba(232,232,236,1);
+}
+.head{
+  display: flex;
+  flex-direction: row;
+  width: 500rpx;
+
+}
+.head_img{
+  margin-left: 32rpx;
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+.name{
+  margin-top: 24rpx;
+  height: 80rpx;
+  font-size: 34rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 32rpx;
+}
+.job{
+  font-size:26rpx;
+color:rgba(119,119,119,1);
+}
+.sure{
+  margin-right: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:152rpx;
+height:70rpx;
+background:rgba(236,75,38,1);
+border-radius:4rpx;
+font-size:30rpx;
+color:rgba(247,247,247,1);
+
+}
+.nochose{
+  width: 750rpx;
+  z-index: 7;
+  position: fixed;
+  bottom: 0;
+  height:92rpx;
+background:rgba(236,75,38,1);
+font-size:30rpx;
+color:rgba(255,255,255,1);
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: none;
+}
+button{
+  border-radius: 0;
+}
+button::after {
+    border-radius: 0;
+}

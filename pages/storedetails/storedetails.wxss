@@ -1,0 +1,180 @@
+
+.head{
+  width:728rpx;
+height:168rpx;
+background:rgba(255,255,255,1);
+border-bottom:1rpx solid rgba(232,232,236,1);
+border-top:1rpx solid rgba(232,232,236,1);
+  padding-left: 32rpx;
+  padding-top: 32rpx;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.store_img{
+  height: 136rpx;
+  width: 136rpx;
+}
+.store_msg{
+  padding-top: 26rpx;
+  padding-bottom: 26rpx;
+  margin-left: 28rpx;
+   height: 84rpx;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 34rpx;
+}
+.store_location{
+  width:450rpx;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+
+ font-size:26rpx;
+ margin-bottom: 32rpx;
+
+color:rgba(119,119,119,1);
+}
+.show_store{
+  margin-top: 20rpx;
+  height: 480rpx;
+  width: 718rpx;
+  background: #fff;
+  padding-left: 32rpx;
+  padding-top: 32rpx;
+  font-size: 30rpx;
+}
+.swiper{
+  margin-top: 32rpx;
+  height: 386rpx;
+  width: 686rpx;
+}
+.slide-image{
+  width:686rpx;
+height:386rpx;
+
+}
+.service_type{
+  display: flex;
+  flex-direction: row;
+}
+.type{
+  padding-left: 20rpx;
+}
+.phonenumber{
+  z-index: 7;
+  position: fixed;
+  right: 20rpx;
+  bottom: 120rpx; 
+}
+.skill_text{
+  margin-top: 20rpx;
+  padding-top: 32rpx;
+  background: #fff;
+}
+.storeservice{
+  font-size: 30rpx;
+  margin-left: 32rpx;
+}
+.skill_one{
+  margin-left: 12rpx;
+  margin-right: 12rpx;
+width:215rpx;
+height:54rpx;
+border-radius:4rpx;
+border:1px solid rgba(236,75,38,1);
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+color:rgba(236,75,38,1);
+font-size: 24rpx;
+line-height:54rpx;
+text-align: center;
+justify-content: center;
+margin-top: 12rpx;
+margin-bottom: 12rpx;
+  
+}
+.skills{
+  padding-top: 12rpx;
+  padding-bottom: 12rpx;
+  padding-left: 10rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 730rpx;
+}
+.more{
+   margin-left: 12rpx;
+  margin-right: 12rpx;
+width:215rpx;
+height:54rpx;
+border-radius:4rpx;
+border:1px solid rgba(236,75,38,1);
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+color:rgba(236,75,38,1);
+font-size: 24rpx;
+line-height:54rpx;
+text-align: center;
+justify-content: center;
+margin-top: 12rpx;
+margin-bottom: 12rpx;
+}
+.hisService{
+  width:686rpx;
+height:94rpx;
+background:rgba(255,255,255,1);
+border:1px solid rgba(232,232,236,1);
+font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+}
+.more_go{
+  height: 24rpx;
+  width: 16rpx;
+}
+.jieshao{
+  margin-top: 20rpx;
+  background: #fff;
+  width: 686rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  font-size:26rpx;
+
+color:rgba(119,119,119,1);
+}
+.jieshao_text{
+
+  font-size:30rpx;
+font-family:PingFangSC-Medium;
+color:rgba(30,30,30,1);
+margin-bottom: 28rpx;
+}
+.phonenumber {
+  height: 96rpx;
+  width: 96rpx;
+  z-index: 7;
+  position: fixed;
+  right: 48rpx;
+  bottom: 48rpx;
+  background: linear-gradient(141.7deg, rgba(255, 195, 0, 1), rgba(247, 121, 92, 1));
+  box-shadow: 2rpx 6rpx 12rpx 2rpx rgba(246, 109, 27, 0.4);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone {
+  height: 38rpx;
+  width: 38rpx;
+}

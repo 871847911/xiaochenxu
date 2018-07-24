@@ -1,0 +1,40 @@
+/* pages/welcome/welcome.wxss */
+
+.container {
+  height: 1334rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo_img {
+  margin-top: 176rpx;
+  height: 290rpx;
+  width: 290rpx;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.store_name {
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  width: 686rpx;
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
+  text-align: center;
+  text-overflow: ellipsis;
+  margin-top: 90rpx;
+  font-size: 40rpx;
+}
+
+.bt {
+  width: 300rpx;
+  height: 100rpx;
+  margin-top: 274rpx;
+  background: rgba(236, 75, 38, 1);
+  border-radius: 4px;
+  font-size: 34rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+}

@@ -1,0 +1,29 @@
+<!--pages/technicianDetails/technicianDetails.wxml-->
+<view class='container'>
+  <view class='head'>
+    <image class='head_img' src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'></image>
+    <view class='name'>jason</view>
+    <view class='job'>染烫师傅</view>
+  </view>
+  <view class='store_msg'>
+    <view class='store_name'>店铺名称
+      <view class='store_location'>杭州市滨江区星光大道115号</view>
+    </view>
+    <view class='store_status'>正在营业
+      <view class='far'> 123km</view>
+    </view>
+  </view>
+  <view class='skills'>
+    <block wx:for="{{skill}}">
+      <view class='skill_one' hidden="{{index >= 5}}">技能分类</view>
+    </block>
+    <view class='more' wx:if="{{skill.length > 6}}">更多</view>
+  </view>
+  <view class='hisService'>他的服务 
+    <view class='more' bindtap='gohisService' >go</view>
+  </view>
+  <view class=''>
+  技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍
+
+      技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍技师介绍</view>
+</view>

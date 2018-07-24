@@ -1,0 +1,20 @@
+<!--pages/hisService/hisService.wxml-->
+<view class='container'>
+  <view class='head'></view>
+
+  <view class='service_box'>
+    <view class='service_box_box'>
+      <view class='serviceType'>
+        服务类型
+        <view class='price'>指导价</view>
+      </view>
+      <view class='serviceItem'>
+        <view class='type' wx:for="{{skill}}" hidden='{{item.isEnable==0}}'>
+          <view class='one'>{{item.name}}
+            <view class='money'>{{item.price}}元</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

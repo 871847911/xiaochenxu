@@ -1,0 +1,278 @@
+/* pages/order/order.wxss */
+
+.picknum {
+  height: 108rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  font-size: 28rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(232, 232, 236, 1);
+  align-items: center;
+}
+
+.name_phone {
+  margin-top: 20rpx;
+  width: 718rpx;
+  height: 192rpx;
+  padding-left: 32rpx;
+  background: #fff;
+  font-size: 30rpx;
+}
+
+.name_tx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid rgba(232, 232, 236, 1);
+}
+
+.name {
+  height: 94rpx;
+  margin-left: 92rpx;
+}
+
+.phone_text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.phone {
+  height: 94rpx;
+  margin-left: 62rpx;
+}
+
+.mid {
+  padding-left: 32rpx;
+  width: 718rpx;
+  height: 282rpx;
+  margin-top: 20rpx;
+  background: #fff;
+  font-size: 30rpx;
+}
+
+.now_store {
+  height: 94rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid rgba(232, 232, 236, 1);
+  font-weight: bold;
+}
+
+.store_img {
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 20rpx;
+}
+
+.chose_one {
+  height: 94rpx;
+  border-bottom: 1px solid rgba(232, 232, 236, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.to_chose {
+  color: #777;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.goto {
+  margin-right: 32rpx;
+  margin-left: 20rpx;
+  height: 28rpx;
+  width: 14rpx;
+}
+
+.ifchose {
+  color: rgba(236, 75, 38, 1);
+}
+
+.num {
+  height: 60rpx;
+  width: 130rpx;
+  border-radius: 8rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(196, 196, 196, 1);
+  color: rgba(30, 30, 30, 1);
+}
+
+.chose_one {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hui {
+  
+  color: #EC4B26;
+  border-bottom: 1px solid #EC4B26;
+}
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.drawer_attr_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+}
+
+.drawer_attr_content {
+  width: 750rpx;
+  background: #fff;
+  
+  overflow-y: scroll;
+  margin-bottom: 20rpx;
+}
+
+.text {
+
+
+  height: 104rpx;
+  font-size: 34rpx;
+  line-height: 104rPX;
+  color: rgba(30, 30, 30, 1);
+  border-bottom: 1px solid rgba(232, 232, 236, 1);
+  font-family:PingFangSC-Medium;
+  display: flex;
+  align-items: center;
+  margin-left: 32rpx;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.service_day {
+  /* display: inline-flex;
+  flex-direction: row;
+  width: 100%; */
+  white-space: nowrap;
+}
+
+.date_day{
+  padding-top: 32rpx;
+  height: 100rpx;
+  width: 220rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  text-align: center;
+  margin-bottom: 2rpx;
+}
+
+.day_time {
+  padding-left: 6rpx;
+  width: 744rpx;
+  
+  overflow: hidden;
+}
+
+.day_times {
+  height: 70rpx;
+  margin-top: 20rpx;
+  display: inline-flex;
+  width: 222rpx;
+  margin-left: 18rpx;
+  font-size: 30rpx;
+  background: #F2F2F2;
+  justify-content: center;
+  align-items: center;
+  border-radius:4px;
+  border: 1rpx solid transparent;
+  
+}
+
+.choseBox {
+  height: 106rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+    box-sizing: border-box;
+    padding-right: 32rpx;
+}
+
+.check_text {
+  height: 42rpx;
+  font-size: 24rpx;
+  color: rgba(119, 119, 119, 1);
+  line-height: 28px;
+}
+
+.chose_time {
+  box-sizing: border-box;
+  padding-left: 32rpx;
+  width: 750rpx;
+  height: 94rpx;
+  display: flex;
+  font-size: 30rpx;
+  background: #fff;
+  text-align: center;
+  line-height: 94rpx;
+  color: rgba(196, 196, 196, 1);
+}
+
+.text_time {
+  color: rgba(30, 30, 30, 1);
+  margin-right: 92rpx;
+}
+
+.needtime {
+  margin-top: 22rpx;
+  margin-left: 32rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  color: rgba(119, 119, 119, 1);
+  line-height: 28px;
+}
+
+.rightnow {
+  height: 98rpx;
+  width: 686rpx;
+  margin-top: 122rpx;
+  background-color: rgba(236, 75, 38, 1);
+  border-radius: 8px;
+  line-height: 98rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: rgba(255, 255, 255, 1);
+}
+.fen{
+background:rgba(236,75,38,0.1);
+color:  #EC4B26;
+border:1rpx solid rgba(236,75,38,1);
+}
+.down{
+margin-right: 32rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.serviceDate{
+  width: 540rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

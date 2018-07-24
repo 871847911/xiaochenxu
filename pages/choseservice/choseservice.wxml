@@ -1,0 +1,18 @@
+<!--pages/choseservice/choseservice.wxml-->
+<view class='container'>
+  <view class='box'>
+    <view class='serviveType'>服务类型
+      <view class='guidePrice'>指导价</view>
+    </view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class='type' wx:for="{{service}}" hidden='{{item.isEnable==0}}'>
+        <view class='serviceName'>{{item.name}}
+          <view class='price_text' >{{item.price}}元
+            <radio class='price' value="{{index}}" color='#EC4B26' data-id='{{index}}'></radio>
+          </view>
+        </view>
+      </label>
+    </radio-group>
+  </view>
+  <button class='sure' bindtap='return'>不指定服务</button>
+</view>

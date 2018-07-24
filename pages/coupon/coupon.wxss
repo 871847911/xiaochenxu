@@ -1,0 +1,63 @@
+/* pages/paySuccess/paySuccess.wxss */
+.coupon{
+  width: 686rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  position: relative
+}
+.coupon .img{
+  width: 100%;
+  height: 100%;
+}
+.couponBox{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.boxLeft{
+  width: 456rpx;
+  height: 100%;
+  float: left
+}
+.boxRight{
+  width: 226rpx;
+  height: 100%;
+  float: right
+}
+.btitle{
+  font-size: 40rpx;
+  color: #1E1E1E;
+  padding: 36rpx 0 24rpx 40rpx;
+}
+.stitle{
+  font-size: 26rpx;
+  color: #777777;
+  padding: 0 0 0 40rpx;
+}
+.redText{
+  font-size: 40rpx;
+  color: #EC4B26;
+  text-align: center;
+  display: block;
+  padding-top: 10rpx;
+  
+}
+.numbr{
+  font-size: 72rpx;
+  color: #EC4B26;
+  display: inline;
+}
+.blackText{
+  font-size: 26rpx;
+  color: #1E1E1E;
+  text-align: center;
+}
+.discountb{
+  font-size: 72rpx;
+}
+.discounts{
+  font-size: 40rpx;
+}

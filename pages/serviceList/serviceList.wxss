@@ -1,0 +1,9 @@
+/* pages/serviceList/serviceList.wxss */
+.store{
+display: flex;
+flex-direction: row;
+font-size: 20rpx;
+}
+.store_location{
+  padding-left: 80rpx;
+}

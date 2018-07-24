@@ -1,0 +1,283 @@
+.swiper {
+  height: 340rpx;
+  width: 750rpx;
+}
+
+.slide-image {
+  height: 340rpx;
+  width: 750rpx;
+}
+
+.store {
+  padding-top: 32rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 26rpx;
+  padding-left: 31rpx;
+  padding-right: 31rpx;
+  padding-bottom: 32rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(232, 232, 236, 1);
+}
+
+.store_name {
+  width: 450rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.store_open{
+  white-space: nowrap;
+}
+
+.location {
+  margin-top: 24rpx;
+  line-height: 26rpx;
+}
+
+.location_img {
+  width: 20rpx;
+  height: 26rpx;
+}
+
+.store_location {
+  /* display: flex;
+  flex-direction: column;
+ justify-content: space-between; */
+  margin-top: 8rpx;
+  margin-left: 86rpx;
+}
+
+.far {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 22rpx;
+}
+
+.right {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-left: 36rpx;
+}
+
+.enter {
+  height: 26rpx;
+  width: 14rpx;
+}
+
+
+
+.order {
+  width: 332rpx;
+  height: 94rpx;
+  background: rgba(43, 169, 111, 1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  margin-right: 22rpx;
+  height: 38rpx;
+  width: 38rpx;
+}
+
+.pay {
+  margin-left: 22rpx;
+  width: 332rpx;
+  height: 94rpx;
+  background: rgba(255, 150, 0, 1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.coupons_med {
+  margin-top: 20rpx;
+  width: 750rpx;
+  padding-top: 40rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  padding-bottom: 40rpx;
+  background: rgba(255, 255, 255, 1);
+  box-sizing:border-box;
+
+  
+}
+
+.coupons {
+  font-size: 34rpx;
+  color: rgba(30, 30, 30, 1);
+  line-height: 34rpx;
+  font-weight: bolder;
+  padding-bottom: 20rpx;
+}
+
+.coupons_one {
+  height: 172rpx;
+  width: 676rpx;
+  margin-top: 20rpx;
+  font-size: 22rpx;
+  color: #ec4b26;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-size: contain;
+  padding-left: 20rpx;
+}
+
+.coupons_money {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 16rpx;
+}
+
+.rmb {
+  height: 22rpx;
+}
+
+.price {
+  height: 42rpx;
+  font-size: 42rpx;
+}
+
+.ifget {
+  margin-right: 58rpx;
+  font-size: 26rpx;
+}
+
+.phonenumber {
+  height: 96rpx;
+  width: 96rpx;
+  z-index: 7;
+  position: fixed;
+  right: 48rpx;
+  bottom: 48rpx;
+  background: linear-gradient(141.7deg, rgba(255, 195, 0, 1), rgba(247, 121, 92, 1));
+  box-shadow: 2rpx 6rpx 12rpx 2rpx rgba(246, 109, 27, 0.4);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone {
+  height: 38rpx;
+  width: 38rpx;
+}
+
+.jishi {
+  padding-top: 40rpx;
+  padding-left: 21rpx;
+  
+  width: 750rpx;
+  margin-top: 20rpx;
+  background: #fff;
+  padding-bottom: 33rpx;
+  box-sizing:border-box;
+}
+
+.coupons_text {
+  
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-left: 11rpx;
+  
+}
+.jishi_all{
+  margin-top: 29rpx;
+  width: 712rpx;
+  display: flex;
+  flex-direction: row;
+  margin-right: 21rpx;
+  flex-wrap: wrap;
+}
+.jishi_one {
+  height: 332rpx;
+  width: 331rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(232, 232, 236, 1);
+  margin-left: 11rpx;
+  margin-right: 11rpx;
+  margin-top: 11rpx;
+  margin-bottom: 11rpx;
+}
+
+.jishi_head {
+  height: 178rpx;
+  width: 178rpx;
+  border-radius: 50%;
+}
+.jishi_name{
+  margin-top: 6rpx;
+  font-size: 34rpx;
+  color:rgba(30,30,30,1);
+}
+.jishi_lev{
+font-size:24rpx;
+color:rgba(119,119,119,1);
+}
+.service{
+  margin-top: 20rpx;
+width: 750rpx;
+padding-top: 40rpx;
+background: #fff;
+box-sizing:border-box;
+}
+.service_text{
+  margin-left: 32rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.service_all{
+padding-left: 21rpx;
+margin-top: 29rpx;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+padding-bottom: 29rpx;
+}
+.service_one{
+  margin-left: 11rpx;
+  margin-right: 11rpx;
+  margin-top: 11rpx;
+  margin-bottom: 11rpx;
+  border:1px solid rgba(232,232,236,1);
+}
+.service_head{
+height: 248rpx;
+width: 332rpx;
+} 
+.service_name{
+  width: 300rpx;
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+  font-size: 26rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10rpx;
+  margin-bottom: 12rpx;
+
+}
+.service_price{
+  font-size: 30rpx;
+  color:rgba(236,75,38,1);
+}

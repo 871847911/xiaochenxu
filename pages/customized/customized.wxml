@@ -1,0 +1,8 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class='container'>
+    <view class="contant">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+  <view class='submit' bindtap='btnClick'>快速预约</view>
+</view>

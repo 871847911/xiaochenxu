@@ -1,0 +1,61 @@
+<!--pages/payfor/payfor.wxml-->
+<view class='store' bindtap='openMap'>
+  <view class='store_all'>
+    <view class='store_name'>{{storeName}}</view>
+    <view class='location' bindtap='getlocation'>
+      <image class='location_img' src='../../images/home_location.png'></image>
+      {{coordinateAdress}}</view>
+  </view>
+  <view class='store_location'>
+    <view class='store_open'>{{storestatus}}</view>
+    <view class='far'>{{distance}}</view>
+  </view>
+</view>
+<view class='money_text'>
+  本次消费总金额 {{price}}（元）
+</view>
+<input class='pay_num' value='{{price}}' placeholder-class="phcolor" placeholder='0.00' type="digit" maxlength='6' bindinput='biNum'></input>
+<view class='tip'>
+  <text class='tip_text'>提示：具体消费金额请询问店家</text>
+</view>
+<view class='ticket'>
+  <view class='ticket_text' wx:if="{{priceid == 'voucher'}}">代金券</view>
+  <view class='ticket_text' wx:elif="{{priceid == 'discount'}}">折扣券({{priceRules}}折)</view>
+  <view class='ticket_text' wx:else>{{priceid}}</view>
+  <view class='choses_ticket' style='color:rgba(236,75,38,1)' bindtap='goto_coupon' wx:if="{{priceid == 'voucher'}}">-{{priceRules}}元
+    <image class='ticket_img' src='../../images/enter_btn.png'></image>
+  </view>
+  <view class='choses_ticket' style='color:rgba(236,75,38,1)'  bindtap='goto_coupon' wx:elif="{{priceid == 'discount'}}">-{{zhekou}}元
+    <image class='ticket_img' src='../../images/enter_btn.png'></image>
+  </view>
+  <view class='choses_ticket' bindtap='goto_coupon' wx:else>{{priceRules}}
+    <image class='ticket_img' src='../../images/enter_btn.png'></image>
+  </view>
+</view>
+<view class='jifen' wx:if="{{isenableIntegral==1}}">
+  <view class='now_text'>
+    当前{{integral}}积分
+    <view class='use_num'>
+      使用积分
+      <switch class='use_sw' bindchange='switchChange' color='rgba(236,75,38,1)'></switch>
+    </view>
+  </view>
+  <view class='jifen_tip'>每1积分可以抵扣{{integralCounterPrice.quota}}元</view>
+  <view class='jfien_bot' wx:if="{{switchChange}}">本单抵扣{{kou}}元（消耗{{kouintegral}}积分）</view>
+</view>
+<view class='pay_type_text'>
+  支付方式
+</view>
+<view class='pay_type'>
+  <view class='pay_img'>
+    <image class='pay_img_img' src='../../images/pay_wechatpay.png'></image>
+    微信支付
+  </view>
+  <radio class='pay_cb' checked='checked'> </radio>
+</view>
+<view class='pay_num_num'>
+  <view class='pay_box'>
+    <view class='money_num'>实际支付:{{rellprice}} 元</view>
+    <view class='pay_bt' style='{{price!=""?"background:rgba(236,75,38,1);":""}}' bindtap='goto_success'>立即支付</view>
+  </view>
+</view>

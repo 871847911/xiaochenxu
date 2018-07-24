@@ -1,0 +1,63 @@
+/* pages/orderSuccess/orderSuccess.wxss */
+.container{
+  font-size:30rpx;
+  color:rgba(30,30,30,1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.row{
+  color:rgba(30,30,30,1);
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  padding-left: 150rpx;
+  padding-top: 32rpx;
+  
+}
+.successImg{
+  margin-top: 80rpx;
+height: 160rpx;
+width: 160rpx;
+}
+.success_text{
+  margin-top: 48rpx;
+  font-size:40rpx;
+font-family:PingFangSC-Medium;
+color:rgba(30,30,30,1);
+margin-bottom: 68rpx;
+}
+.order_num{
+  margin-left: 50rpx;
+}
+.name{
+  margin-left: 18rpx;
+}
+.phone{
+  margin-left: 32rpx;
+}
+.name_name{
+  margin-left: 50rpx;
+}
+.serviceName{
+  margin-left: 50rpx;
+}
+.serviceTime{
+  margin-left: 50rpx;
+}
+.tip{
+  margin-top: 164rpx;
+  color:rgba(119,119,119,1);
+}
+.return{
+  margin-top: 64rpx;
+  width:686rpx;
+height:98rpx;
+font-size:34rpx;
+background:rgba(236,75,38,1);
+border-radius:8rpx;
+line-height: 98rpx;
+text-align: center;
+color: rgba(255,255,255,1);
+}

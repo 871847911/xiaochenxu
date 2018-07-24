@@ -1,0 +1,27 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class='container'>
+  <view class='header'>
+    <image src="{{serverUrl}}" class='photo'></image>
+    <view class='mid'>
+      <view class='float_l'>
+        <text class='bTitle'>{{name}}</text>
+        <view class='padding'>
+          <text class='num'>¥</text>
+          <text class='money'>{{price}}</text>
+          <text class='zhidao'>指导价</text>
+        </view>
+      </view>
+
+      <view class='float_r' bindtap='gotoOrder'>预约</view>
+    </view>
+  </view>
+
+  <view class='footer'>
+    <view class='ft_title'>服务介绍</view>
+    <view class='introduce'>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,59 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+
+<view class='container'>
+  <view class="weui-loadmore weui-loadmore_line">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">可使用优惠卷（{{keyong}}张）</view>
+  </view>
+  <block wx:for="{{list}}" wx:for-item="page" wx:key="*this">
+    <view class='coupon' bindtap='clickCoupon' data-index='{{index}}' wx:if="{{page.isUser}}">
+      <image class='img' src="../../images/sales_bg.png"></image>
+      <view class='couponBox'>
+        <view class='boxLeft'>
+          <view class='btitle' wx:if="{{page.type=='voucher'}}">代金券</view>
+          <view class='btitle' wx:else>折扣券</view>
+          <view class='stitle'>有效期{{page.effectiveDateStart}}-{{page.effectiveDateStop}}</view>
+        </view>
+        <view class="click" wx:if="{{key==index}}">
+          <image class='clickImg' src="../../images/sale_mark_icon.png"></image>
+        </view>
+        <view class='boxRight'>
+          <view class='redText' wx:if="{{page.type =='voucher'}}">¥
+            <view class='numbr'>{{page.quota}}</view>
+          </view>
+          <view class='redText discountb' wx:else>{{page.quota}}
+            <view class='numbr discounts'>折</view>
+          </view>
+          <view class='blackText'>满{{page.priceRules}}可用</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class="weui-loadmore weui-loadmore_line">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">不可使用优惠卷（{{bukeyong}}张）</view>
+  </view>
+  <block wx:for="{{list}}" wx:for-item="page" wx:key="*this">
+    <view class='coupon' wx:if="{{page.isUser==false}}">
+      <image class='img' src="../../images/sales_bg.png"></image>
+      <view class='couponBox'>
+        <view class='boxLeft'>
+          <view class='btitle coloreee' wx:if="{{page.type=='voucher'}}">代金券</view>
+          <view class='btitle coloreee' wx:else>折扣券</view>
+          <view class='stitle coloreee'>有效期{{page.effectiveDateStart}}-{{page.effectiveDateStop}}</view>
+        </view>
+        <view class="click" wx:if="{{key==index}}">
+          <image class='clickImg' src="../../images/sale_mark_icon.png"></image>
+        </view>
+        <view class='boxRight'>
+          <view class='redText discounts  coloreee' wx:if="{{page.type =='voucher'}}">¥
+            <view class='numbr  coloreee'>{{page.quota}}</view>
+          </view>
+          <view class='redText discountb coloreee' wx:else>{{page.quota}}
+            <view class='numbr discounts  coloreee'>折</view>
+          </view>
+          <view class='blackText coloreee'>满{{page.priceRules}}可用</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class='dontchose' bindtap='dontchose'>不使用优惠券</view>
+</view>

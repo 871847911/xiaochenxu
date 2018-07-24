@@ -1,0 +1,44 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+<view class='container'>
+  <view class='store-box'>
+    <view class='store' bindtap='openMap'>
+      <view class='store_all'>
+        <view class='store_name'>{{storeName}}</view>
+        <view class='location' bindtap='getlocation'>
+          <image class='location_img' src='../../images/home_location.png'></image>
+          {{coordinateAdress}}</view>
+      </view>
+      <view class='store_location'>
+        <view class='store_open'>{{storestatus}}</view>
+        <view class='far'>{{distance}}</view>
+      </view>
+    </view>
+  </view>
+  <view style='padding-top:175rpx;'>
+    <block wx:for="{{twoList}}" wx:for-item="page" wx:key="*this">
+      <view class="mainBox"  hidden="{{page.staff.isEnable==0}}">
+        <!-- 技师信息 -->
+        <view class='header'>
+          <view class="weui-cell">
+            <view class="weui-cell__hd" style="position: relative;margin-right: 32rpx;" data-index='{{index}}' bindtap='gohisService'>
+              <image src="{{page.staff.headUrl}}"  style="width: 128rpx; height:128rpx; display: block;border-radius:50%;" />
+            </view>
+            <view class="weui-cell__bd">
+              <view class='name'>{{page.staff.nickName}}</view>
+              <view style="font-size: 26rpx;color: #777777;margin-top: 10rpx;">{{page.staff.staffTypeName}}</view>
+            </view>
+          </view>
+          <view class='bnt' bindtap='addOrder' data-index="{{index}}">预约</view>
+          <!-- 按钮 -->
+        </view>
+        <!-- 标签 -->
+        <view class='skills'>
+          <block wx:for="{{page.list}}" wx:for-item="twodata" wx:key="*this">
+            <view class='skill_one' hidden="{{index >= 5||twodata.name==null}}">{{twodata.name}}</view>
+          </block>
+          <view class='more' wx:if="{{page.list.length > 5}}" data-index="{{index}}" bindtap='gohisService'>...</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

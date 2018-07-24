@@ -1,0 +1,32 @@
+<!--pages/orderSuccess/orderSuccess.wxml-->
+<view class='container'>
+  <image class='successImg' src='../../images/succed.png'></image>
+  <text class='success_text'>预约成功</text>
+  <view class='orderNum row'>
+    预约人数：
+    <view class='order_num'>{{customerNumber}}人</view>
+  </view>
+  <view class='order_person row' >
+    预约人信息：
+    <view class='name'>{{userName}}</view>
+    <view class='phone'>{{phone}}</view>
+  </view>
+  <view class='orederTechnician row'>
+    预约技师：
+    <view class='name_name'>{{staffName}}</view>
+  </view>
+  <view class='orderService row'>
+    预约服务： 
+    <view class='serviceName'>{{serverName}}</view>
+  </view>
+  <view class='orderTime row'>
+    预约时间：
+    <view class='serviceTime'> {{year}} {{chosetimes}} {{week}}</view>
+  </view>
+  <view class='tip'>
+    您已经成功预约，请按时到店享受服务
+  </view>
+  <button class='return' bindtap='return'>
+  返回首页
+  </button>
+</view>

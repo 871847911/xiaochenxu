@@ -1,0 +1,28 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view class='container'>
+  <view class='head'>
+    <image class='head_img' src="{{avatarUrl}}"></image>
+    <view class='name'>{{nickName}}</view>
+  </view>
+  <view class='mid'>
+    <view class='text' bindtap='go_person'>
+      完善个人信息
+      <image class='go' src='../../images/enter_btn.png' ></image>
+    </view>
+    <view class='text' bindtap='goto_myReservation'>
+      我的预约
+      <image class='go' src='../../images/enter_btn.png'></image>
+    </view>
+    <view class='text' bindtap='goto_coupon'>
+      我的优惠券
+      <image class='go' src='../../images/enter_btn.png'></image>
+    </view>
+    <view class=''></view>
+    <view class='text'>
+      我的积分
+      <view class='num'>{{integral}}积分</view>
+    </view>
+  </view>
+  <view class='company'>微动征程信息提供技术支持</view>
+ 
+</view>

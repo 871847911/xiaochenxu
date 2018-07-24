@@ -1,0 +1,62 @@
+/* pages/choseservice/choseservice.wxss */
+.container{
+  padding-bottom: 150rpx;
+}
+.box {
+  border: 1rpx solid rgba(232, 232, 236, 1);
+  margin-top: 32rpx;
+  width: 622rpx;
+  background: #fff;
+  margin-left: 32rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+}
+.guidePrice{
+  margin-right: 96rpx;
+}
+
+.serviveType {
+  padding-top: 40rpx;
+  height: 74rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1rpx solid rgba(232, 232, 236, 1);
+  font-size: 34rpx;
+  font-family: PingFangSC-Medium;
+}
+
+.serviceName {
+  padding-top: 32rpx;
+  padding-bottom: 32rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: rgba(119, 119, 119, 1);
+  border-bottom: 1rpx solid rgba(232, 232, 236, 1);
+}
+.price{
+  margin-left: 52rpx;
+}
+.sure {
+  z-index: 7;
+  position: fixed;
+ 
+height:94rpx;
+background:rgba(236,75,38,1);
+  width: 750rpx;
+  bottom: 0rpx;
+  font-size:30rpx;
+font-family:PingFangSC-Medium;
+color:rgba(255,255,255,1);
+line-height: 94rpx;
+text-align: center;
+}
+button{
+  border-radius: 0;
+}
+button::after {
+    border-radius: 0;
+}

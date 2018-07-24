@@ -1,0 +1,15 @@
+/* pages/paySuccess/paySuccess.wxss */
+.weui-cell__bd {
+  font-size: 30rpx;
+  color: #777;
+}
+.weui-cell__ft {
+  font-size: 30rpx;
+  color: #1E1E1E;
+}
+.weui-cell {
+  padding: 32rpx 32rpx;
+}
+.font_blue{
+  color: #4A90E2;
+}

@@ -1,0 +1,66 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+
+<view class='container'>
+  <!--头部-->
+  <view class='store-box'>
+    <view class='store' bindtap='openMap'>
+      <view class='store_all'>
+        <view class='store_name'>{{storeName}}</view>
+        <view class='location' bindtap='getlocation'>
+          <image class='location_img' src='../../images/home_location.png'></image>
+          {{coordinateAdress}}</view>
+      </view>
+      <view class='store_location'>
+        <view class='store_open'>{{storestatus}}</view>
+        <view class='far'>{{distance}}</view>
+      </view>
+    </view>
+    <!--导航-->
+    <view class='nav_box'>
+      <view class='nav_left' bindtap="kindToggle">
+        <text>全部服务</text>
+        <view class='border'></view>
+        <image src="{{open ? '../../images/up.png' : '../../images/down.png'}}" class="gou"></image>
+      </view>
+      <view class='nav_right'>
+        <scroll-view scroll-x="true" scroll-with-animation="true" scroll-left="{{scrollLeft}}" style=" white-space: nowrap; display: flex">
+          <block wx:for="{{pages}}" wx:for-item="page" wx:key="*this">
+            <!-- display: inline-block-->
+            <view class='nav_right_li' style='{{key==index?"color:#EC4B26;":""}} z-index:999;' bindtap='changColorRight' data-index='{{index}}' data-name='{{page.id}}'>{{page.name}}
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+    <!--下拉列表-->
+    <view class="kind-list__item-bd {{open ? 'kind-list__item-bd_show' : ''}}">
+      <view class="weui-cells {{open ? 'weui-cells_show' : ''}}">
+        <scroll-view scroll-y="false" scroll-with-animation="true" scroll-top="{{scrollTop}}" style="{{longe ? 'height:700rpx' : ''}}">
+          <block wx:for="{{pages}}" wx:for-item="page" wx:key="*this">
+            <view class="weui-cell__bd" style='{{key==index?"color:#EC4B26;":""}} z-index:999;' bindtap='changColor' data-index='{{index}}' data-name='{{page.id}}'>{{page.name}}
+              <image src="{{key==index?'../../images/gou.png' : ''}}" class="liClick"></image>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+  <!--内容-->
+  <view class='mainBox '>
+    <view class='mainList'>
+      <block wx:for="{{detailsList}}" wx:for-item="page" wx:key="*this">
+        <view class='shopList' bindtap='goDetails' data-index='{{index}}' wx:if="{{page.isEnable==1}}">
+          <image class='shopListImg' src="{{page.thumbnailUrl}}"></image>
+          <view class='shopLisText'>
+            <text class='fl_l'>{{page.name}}</text>
+            <text class='fl_r'>¥{{page.price}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <block wx:if="{{open}}">
+    <view class='pup' bindtap='closepup'></view>
+  </block>
+
+</view>

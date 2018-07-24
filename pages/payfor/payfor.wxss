@@ -1,0 +1,219 @@
+/* pages/payfor/payfor.wxss */
+.store {
+  padding-top: 32rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 26rpx;
+  padding-left: 31rpx;
+  padding-right: 31rpx;
+  padding-bottom: 32rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(232, 232, 236, 1);
+}
+
+.store_name {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.location {
+  margin-top: 24rpx;
+  line-height: 26rpx;
+}
+
+.location_img {
+  width: 20rpx;
+  height: 26rpx;
+}
+
+.store_location {
+  margin-top: 8rpx;
+  margin-left: 164rpx;
+}
+
+.far {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 22rpx;
+}
+
+.right {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-left: 90rpx;
+}
+
+.enter {
+  height: 26rpx;
+  width: 14rpx;
+}
+.money_text{
+  height: 102rpx;
+  font-size:30rpx;
+  margin-left: 32rpx;
+  margin-top: 48rpx;
+  font-weight: bold;
+}
+.pay_num{
+  padding-left: 32rpx;
+  height: 126rpx;
+  background: #fff;
+  border:1rpx solid rgba(232,232,236,1);
+  font-size:96rpx;
+font-family:PingFangSC-Regular;
+color:rgba(241,161,142,1);
+}
+.tip{
+  padding-left: 32rpx;
+  padding-top: 16rpx;
+  height: 74rpx;
+  font-size: 26rpx;
+  color:rgba(119,119,119,1);
+}
+.ticket{
+  height: 92rpx;
+  border: 1rpx solid rgba(232,232,236,1);
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  align-items: center;
+  background: #fff;
+  line-height: 92rpx;
+  text-align: center;
+  border-left: none!important;
+  border-right: none!important;
+}
+.phcolor{
+  color:rgba(241,161,142,1);
+}
+.choses_ticket{
+  color:rgba(119,119,119,1);
+  
+}
+.ticket_img{
+  margin-left: 18rpx;
+  width: 14rpx;
+  height: 26rpx;
+}
+.jifen{
+  margin-top: 20rpx;
+  height: 120rpx;
+  background:rgba(255,255,255,1);
+  border:2rpx solid rgba(242,242,242,1);
+  padding-left: 32rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30rpx;
+  position: relative;
+}
+.jfien_bot{
+  position: absolute;
+  left: 32rpx;
+  bottom: -58rpx;
+  font-size:24rpx;
+color:rgba(236,75,38,1);
+}
+.now_text{
+  padding-right: 32rpx;
+ height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 50rpx;
+  text-align: center;
+}
+.use_sw{
+ margin-left: 34rpx;
+}
+.use_num{
+  height: 48rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.use_sw{
+  padding-bottom: 2rpx;
+  margin-bottom: 8rpx;
+}
+.jifen_tip{
+  margin-top: 12rpx;
+  font-size:24rpx;
+
+color:rgba(119,119,119,1);
+}
+.pay_type_text{
+  padding-top: 65rpx;
+  padding-left: 32rpx;
+height: 56rpx;
+font-weight: bold;
+font-size: 30rpx;
+}
+.pay_type{
+  padding-right: 32rpx;
+  height: 92rpx;
+  background: #fff;
+  border:1rpx solid rgba(232,232,236,1);
+  display: flex;
+  flex-direction: row;
+justify-content: space-between;
+align-items: center;
+border-left: none!important;
+  border-right: none!important;
+}
+.pay_img{
+  margin-left: 32rpx;
+  
+  display: flex;
+  flex-direction: row;
+  height: 92rpx;
+  line-height: 92rpx;
+  text-align: center;
+  align-items: center;
+}
+.pay_img_img{
+  margin-right: 24rpx;
+  height: 46rpx;
+  width: 52rpx;
+}
+.pay_num_num{
+  position: absolute;
+  bottom: 0rpx;
+  height: 98rpx;
+font-size:34rpx;
+font-family:PingFangSC-Medium;
+color:rgba(255,255,255,1);
+}
+.pay_box{
+  width:750rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  
+}
+.money_num{
+  width: 438rpx;
+  background:rgba(61,61,61,1);
+  padding-left: 32rpx;
+  display: flex;
+  align-items: center;
+}
+.pay_bt{
+  width: 280rpx;
+  background:rgba(241,161,142,1);
+  line-height: 98rpx;
+  text-align: center;
+}
+.wx-switch-input{width:84rpx !important;height:46rpx !important;border:1rpx solid rgba(232,232,236,1);}
+.wx-switch-input::before{width:84rpx !important;height: 46rpx !important;border:1rpx solid rgba(232,232,236,1);}
+.wx-switch-input::after{width: 46rpx !important;height: 46rpx !important;}
+
+input{
+  border-left: none!important;
+  border-right: none!important;
+}

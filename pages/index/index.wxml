@@ -1,0 +1,11 @@
+<!--pages/welcome/welcome.wxml-->
+<view class='container'>
+  <view class='logo'>
+    <image class='logo_img' src='{{storeUrl}}'></image>
+  </view>
+  <view class='store_name'>{{storeName}}</view>
+
+ <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='bt'> 进入商铺 </button>
+
+ <!-- wx:if="{{!hasUserInfo && canIUse}} -->
+</view>

@@ -1,0 +1,25 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+
+<view class='container'>
+  <block wx:for="{{list}}" wx:for-item="page" wx:key="*this">
+    <view class='coupon' wx:if="{{page.isUser}}">
+      <image class='img' src="../../images/sales_bg.png"></image>
+      <view class='couponBox'>
+        <view class='boxLeft'>
+          <view class='btitle' wx:if="{{page.type=='voucher'}}">代金券</view>
+          <view class='btitle' wx:else>折扣券</view>
+          <view class='stitle'>有效期{{page.effectiveDateStart}}-{{page.effectiveDateStop}}</view>
+        </view>
+        <view class='boxRight'>
+          <view class='redText' wx:if="{{page.type =='voucher'}}">¥
+            <view class='numbr'>{{page.quota}}</view>
+          </view>
+          <view class='redText discountb' wx:else>{{page.quota}}
+            <view class='numbr discounts'>折</view>
+          </view>
+          <view class='blackText'>满{{page.priceRules}}可用</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,169 @@
+/* pages/technicianDetails/technicianDetails.wxss */
+.head{
+  height: 330rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border:1px solid rgba(232,232,236,1);
+  border-left: none;
+  border-right: none;
+}
+.head_img{
+  margin-top: 32rpx;
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 50%;
+  
+}
+.name{
+  margin-top: 10rpx;
+  font-size:40rpx;
+}
+.job{
+  margin-top: 16rpx;
+  font-size:26rpx;
+color:rgba(119,119,119,1);
+}
+.store {
+  margin-top: 20rpx;
+  padding-top: 32rpx;
+  flex-direction: row;
+  font-size: 26rpx;
+  padding-left: 31rpx;
+  padding-right: 31rpx;
+  padding-bottom: 32rpx;
+  background: rgba(255, 255, 255, 1);
+  border:1px solid rgba(232,232,236,1);
+  overflow: hidden;
+}
+.store_all{
+  float: left
+}
+.store_name {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.location {
+  margin-top: 24rpx;
+  line-height: 26rpx;
+}
+
+.location_img {
+  width: 20rpx;
+  height: 26rpx;
+}
+
+.store_location {
+  float: right
+}
+
+.far {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 22rpx;
+}
+
+.right {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-left: 90rpx;
+}
+
+.enter {
+  height: 26rpx;
+  width: 14rpx;
+}
+.skill_one{
+  margin-left: 12rpx;
+  margin-right: 12rpx;
+width:215rpx;
+height:54rpx;
+border-radius:39rpx;
+border:1px solid rgba(236,75,38,1);
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+color:rgba(236,75,38,1);
+font-size: 24rpx;
+line-height:54rpx;
+text-align: center;
+justify-content: center;
+margin-top: 12rpx;
+margin-bottom: 12rpx;
+ 
+}
+.skills{
+  padding-top: 12rpx;
+  padding-bottom: 12rpx;
+  padding-left: 10rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 730rpx;
+}
+.more{
+   margin-left: 12rpx;
+  margin-right: 12rpx;
+width:215rpx;
+height:54rpx;
+border-radius:39rpx;
+border:1px solid rgba(236,75,38,1);
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+color:rgba(236,75,38,1);
+font-size: 24rpx;
+line-height:54rpx;
+text-align: center;
+justify-content: center;
+margin-top: 12rpx;
+margin-bottom: 12rpx;
+}
+.hisService{
+  width:686rpx;
+height:94rpx;
+background:rgba(255,255,255,1);
+border:1px solid rgba(232,232,236,1);
+font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+}
+.more_go{
+  height: 24rpx;
+  width: 16rpx;
+}
+.jieshao{
+  margin-top: 20rpx;
+  background: #fff;
+  width: 686rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  font-size:26rpx;
+
+color:rgba(119,119,119,1);
+}
+.hrefodder{
+  width: 100%;
+  height: 90rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 90rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #ec4b26;
+}
+.container{
+  padding-bottom: 122rpx;
+}

@@ -1,0 +1,187 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.0",
+	"appid": "wx75636d6678ab478b",
+	"projectname": "%E7%BE%8E%E4%B8%9A%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "storedetails",
+					"pathName": "pages/storedetails/storedetails",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "serviceList",
+					"pathName": "pages/serviceList/serviceList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order/order",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "technicianDetails",
+					"pathName": "pages/technicianDetails/technicianDetails",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "choseservice",
+					"pathName": "pages/choseservice/choseservice",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "orderSuccess",
+					"pathName": "pages/orderSuccess/orderSuccess",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "paySuccess",
+					"pathName": "pages/paySuccess/paySuccess",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personalCenter",
+					"pathName": "pages/personalCenter/personalCenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "payfor",
+					"pathName": "pages/payfor/payfor",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "technician",
+					"pathName": "pages/technician/technician",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "hisService",
+					"pathName": "pages/hisService/hisService",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "hisService",
+					"pathName": "pages/storedetails/storedetails",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "first",
+					"pathName": "pages/first/first",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personMsg",
+					"pathName": "pages/personMsg/personMsg",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "technicianInShop",
+					"pathName": "pages/technicianInShop/technicianInShop",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "technicianDetailReservation",
+					"pathName": "pages/technicianDetailReservation/technicianDetailReservation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myReservation",
+					"pathName": "pages/myReservation/myReservation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myReservationList",
+					"pathName": "pages/myReservationList/myReservationList",
+					"query": ""
+				},
+				{
+					"id": 19,
+					"name": "coupon",
+					"pathName": "pages/coupon/coupon",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order/order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "serviceList",
+					"pathName": "pages/serviceList/serviceList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "serviceInOurShop",
+					"pathName": "pages/serviceInOurShop/serviceInOurShop",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personalInformation",
+					"pathName": "pages/personalInformation/personalInformation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "bindingPhoneNumber",
+					"pathName": "pages/bindingPhoneNumber/bindingPhoneNumber",
+					"query": ""
+				}
+			]
+		}
+	}
+}

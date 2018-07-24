@@ -1,0 +1,148 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view wx-if="{{list.length>0}}">
+            <block wx:for="{{list}}" wx:for-item="page" wx:key="*this">
+              <view class='mainBox' data-id='{{index}}'>
+                <view class='boxTitle'>
+                  <image class='img' src="../../images/order_shop.png"></image>
+                  <view class='store'>{{page.storeName}}</view>
+                  <image class='link' src="../../images/enter_btn.png"></image>
+                  <view class='state' wx-if="{{page.status==0}}">待服务</view>
+                  <view class='state' wx:elif="{{page.status==1}}">已完成</view>
+                  <view class='state' wx:else="{{page.status==2||page.status==3}}">已取消</view>
+                </view>
+                <view class='concat' bindtap='clickHref' data-index='{{index}}'>
+                  <view class='concatText'>技师：
+                    <text>{{page.staffName}}</text>
+                  </view>
+                  <view class='concatText'>服务：
+                    <text>{{page.serverName}}</text>
+                  </view>
+                  <view class='concatText'>{{page.startTime.time}}</view>
+                </view>
+                <block wx:if="{{page.status==0}}">
+                  <button class='bt_l' data-index='{{index}}' bindtap='changreser'>修改预约</button>
+                  <button class='bt_r' bindtap='clickCancel' data-index='{{index}}'>取消预约</button>
+                </block>
+              </view>
+            </block>
+          </view>
+          <view wx:else class='noImage'>
+            <image class='Image' src="../../images/none.png"></image>
+            <view class='notext'>暂无记录</view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view wx-if="{{list.length>0}}">
+            <block wx:for="{{list}}" wx:for-item="page" wx:key="*this">
+              <view class='mainBox'>
+                <view class='boxTitle'>
+                  <image class='img' src="../../images/order_shop.png"></image>
+                  <view class='store'>{{page.storeName}}</view>
+                  <image class='link' src="../../images/enter_btn.png"></image>
+                  <view class='state' wx-if="{{page.status==0}}">待服务</view>
+                  <view class='state' wx:elif="{{page.status==1}}">已完成</view>
+                  <view class='state' wx:else="{{page.status==2||page.status==3}}">已取消</view>
+                </view>
+                <view class='concat' bindtap='clickHref' data-index='{{index}}'>
+                  <view class='concatText'>技师：
+                    <text>{{page.staffName}}</text>
+                  </view>
+                  <view class='concatText'>服务：
+                    <text>{{page.serverName}}</text>
+                  </view>
+                  <view class='concatText'>{{page.startTime.time}}</view>
+                </view>
+                <block wx:if="{{page.status==0}}">
+                  <button class='bt_l' data-index='{{index}}' bindtap='changreser'>修改预约</button>
+                  <button class='bt_r' bindtap='clickCancel' data-index='{{index}}'>取消预约</button>
+                </block>
+              </view>
+            </block>
+          </view>
+          <view wx:else class='noImage'>
+            <image class='Image' src="../../images/none.png"></image>
+            <view class='notext'>暂无记录</view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view wx-if="{{list.length>0}}">
+            <block wx:for="{{list}}" wx:for-item="page" wx:key="*this">
+              <view class='mainBox'>
+                <view class='boxTitle'>
+                  <image class='img' src="../../images/order_shop.png"></image>
+                  <view class='store'>{{page.storeName}}</view>
+                  <image class='link' src="../../images/enter_btn.png"></image>
+                  <view class='state' wx-if="{{page.status==0}}">待服务</view>
+                  <view class='state' wx:elif="{{page.status==1}}">已完成</view>
+                  <view class='state' wx:else="{{page.status==2||page.status==3}}">已取消</view>
+                </view>
+                <view class='concat' bindtap='clickHref' data-index='{{index}}'>
+                  <view class='concatText'>技师：
+                    <text>{{page.staffName}}</text>
+                  </view>
+                  <view class='concatText'>服务：
+                    <text>{{page.serverName}}</text>
+                  </view>
+                  <view class='concatText'>{{page.startTime.time}}</view>
+                </view>
+                <block wx:if="{{page.status==0}}">
+                  <button class='bt_l'>修改预约</button>
+                  <button class='bt_r'>取消预约</button>
+                </block>
+              </view>
+            </block>
+          </view>
+          <view wx:else class='noImage'>
+            <image class='Image' src="../../images/none.png"></image>
+            <view class='notext'>暂无记录</view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+          <view wx-if="{{list.length>0}}">
+            <block wx:for="{{list}}" wx:for-item="page" wx:key="*this">
+              <view class='mainBox'>
+                <view class='boxTitle'>
+                  <image class='img' src="../../images/order_shop.png"></image>
+                  <view class='store'>{{page.storeName}}</view>
+                  <image class='link' src="../../images/enter_btn.png"></image>
+                  <view class='state' wx-if="{{page.status==0}}">待服务</view>
+                  <view class='state' wx:elif="{{page.status==1}}">已完成</view>
+                  <view class='state' wx:else="{{page.status==2||page.status==3}}">已取消</view>
+                </view>
+                <view class='concat' bindtap='clickHref' data-index='{{index}}'>
+                  <view class='concatText'>技师：
+                    <text>{{page.staffName}}</text>
+                  </view>
+                  <view class='concatText'>服务：
+                    <text>{{page.serverName}}</text>
+                  </view>
+                  <view class='concatText'>{{page.startTime.time}}</view>
+                </view>
+                <block wx:if="{{page.status==0}}">
+                  <button class='bt_l'>修改预约</button>
+                  <button class='bt_r'>取消预约</button>
+                </block>
+              </view>
+            </block>
+          </view>
+          <view wx:else class='noImage'>
+            <image class='Image' src="../../images/none.png"></image>
+            <view class='notext'>暂无记录</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

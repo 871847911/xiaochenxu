@@ -1,0 +1,120 @@
+/* pages/paySuccess/paySuccess.wxss */
+
+.container {
+  padding-top: 68rpx;
+}
+
+.radio-group label {
+  display: block;
+  width: 580rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  color: #1e1e1e;
+  margin-bottom: 52rpx;
+}
+
+radio {
+  margin-right: 48rpx;
+}
+
+radio .wx-radio-input {
+  /* 自定义样式.... */
+  border-radius: 50%;
+  height: 42rpx;
+  width: 42rpx;
+  background: #f5f5f5;
+  border: 1rpx solid rgba(196, 196, 196, 1);
+}
+
+.weui-cells {
+  margin: 0 48rpx;
+  border: 1rpx solid rgba(196, 196, 196, 1);
+}
+
+.weui-cell {
+  border: none;
+}
+
+textarea {
+  height: 220rpx;
+  font-size: 30rpx;
+}
+
+.submit {
+  width: 686rpx;
+  height: 98rpx;
+  background: #ec4b26;
+  border-radius: 8rpx;
+  font-size: 34rpx;
+  color: #fff;
+  line-height: 98rpx;
+  margin: 0 auto;
+  margin-top: 120rpx;
+  text-align: center;
+}
+
+.disabled {
+  width: 686rpx;
+  height: 98rpx;
+  background: #f1a18e;
+  border-radius: 8rpx;
+  font-size: 34rpx;
+  color: #fff;
+  line-height: 98rpx;
+  margin: 0 auto;
+  margin-top: 120rpx;
+  text-align: center;
+}
+
+.validate {
+  font-size: 26rpx;
+  color: #f00;
+  margin: 16rpx 48rpx 0 48rpx;
+}
+
+button[type=default] {
+  width: 686rpx;
+  height: 98rpx;
+  background: #f1a18e;
+  border-radius: 8rpx;
+  font-size: 34rpx;
+  color: #fff;
+  line-height: 98rpx;
+  margin: 0 auto;
+  margin-top: 120rpx;
+  text-align: center;
+}
+
+.btn-hover {
+  width: 686rpx;
+  height: 98rpx;
+  background: #f1a18e;
+  border-radius: 8rpx;
+  font-size: 34rpx;
+  color: #fff;
+  line-height: 98rpx;
+  margin: 0 auto;
+  margin-top: 120rpx;
+  text-align: center;
+}
+
+botton::after {
+  border: none;
+}
+
+.popu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -49px;
+  margin-left: -241rpx;
+  width: 482rpx;
+  height: 98rpx;
+  background: rgba(0, 0, 0, 0.598);
+  border-radius: 8rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 98rpx;
+  z-index: 3;
+}

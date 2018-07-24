@@ -1,0 +1,15 @@
+<!--pages/technician/technician.wxml-->
+<view class='container'>
+  <block wx:for="{{technician}}">
+    <view class='oneperson' hidden='{{item.isEnable==0}}'>
+      <view class='head' bindtap='gotoDetails' data-id='{{index}}'>
+        <image class='head_img' src='{{item.headUrl}}'></image>
+        <view class='name'>{{item.nickName}}
+          <view class='job'>{{item.staffTypeName}}</view>
+        </view>
+      </view>
+      <view class='sure' bindtap='suerChose' data-id='{{index}}'>选择</view>
+    </view>
+  </block>
+  <button class='nochose' bindtap='return'>不指定技师</button>
+</view>

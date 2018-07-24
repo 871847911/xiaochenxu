@@ -1,0 +1,87 @@
+/* pages/paySuccess/paySuccess.wxss */
+
+.photo {
+  width: 686rpx;
+  height: 386rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.header {
+  background: #fff;
+  padding-top: 32rpx;
+  overflow: hidden;
+}
+
+.mid {
+  width: 686rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 32rpx;
+}
+
+.float_l {
+  float: left;
+}
+
+.bTitle {
+  font-size: 34rpx;
+  color: #1e1e1e;
+  display: block;
+  padding-top: 20rpx;
+}
+
+
+.num{
+  font-size: 24rpx;
+  color: #EC4B26;
+  display: inline-block;
+}
+.money{
+  font-size: 34rpx;
+  color: #EC4B26;
+  display: inline-block;
+  padding: 0 26rpx 0 8rpx;
+  margin: 0;
+}
+.zhidao {
+  border-radius:4rpx;
+  border:1rpx solid rgba(236,75,38,1);
+  font-size: 24rpx;
+  color: #EC4B26;
+  display: inline-block;
+  padding: 0 6rpx;
+  vertical-align: middle;
+  margin-top: -10rpx;
+}
+.padding{
+  padding-top: 10rpx;
+}
+.float_r {
+  float: right;
+  width: 152rpx;
+  height: 72rpx;
+  background: rgba(236, 75, 38, 1);
+  border-radius: 4rpx;
+  text-align: center;
+  line-height: 72rpx;
+  color: #fff;
+  margin-top: 54rpx;
+}
+.footer{
+  margin: 32rpx 0;
+  padding: 32rpx 32rpx;
+  background: #fff;
+  border-top:1rpx solid rgba(232,232,236,1);
+  border-bottom:1rpx solid rgba(232,232,236,1);
+}
+.ft_title{
+  font-size: 30rpx;
+  color: #1E1E1E;
+  padding-bottom: 26rpx;
+}
+.introduce{
+  font-size: 26rpx;
+  color: #777777;
+  line-height:42rpx;
+}

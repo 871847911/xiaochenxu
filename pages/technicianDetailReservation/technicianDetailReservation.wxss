@@ -1,0 +1,34 @@
+/* pages/technicianDetails/technicianDetails.wxss */
+.head{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.head_img{
+  height: 160rpx;
+  width: 160rpx;
+}
+.store_msg{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.skill_one{
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 250rpx;
+}
+.skills{
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 750rpx;
+}
+.hisService{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

@@ -1,0 +1,38 @@
+<view class="container">
+  <view class='head'>
+    <view class='store_img'>
+      <image class='store_img' src='{{storeUrl}}'></image>
+    </view>
+    <view class='store_msg'>
+      <view class='store_name'>
+        {{storeName}}
+      </view>
+      <view class='store_location'>{{Adress}}</view>
+    </view>
+  </view>
+  <view class='show_store'>
+    <view class='show_text'>店铺展示</view>
+    <swiper class='swiper' autoplay="true" indicator-dots="true">
+      <block wx:for="{{urls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="686" height="386" bindtap='lookimg' data-id='{{index}}' />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='skill_text'>
+    <text class='storeservice'>店铺服务</text>
+
+    <view class='skills'>
+
+      <block wx:for="{{skill}}" wx:for-item="page" wx:key="*this">
+        <view class='skill_one' hidden="{{index >= 5}}">{{page.name}}</view>
+      </block>
+      <view class='more' bindtap='goMyserves' wx:if="{{skill.length >5}}">...</view>
+    </view>
+  </view>
+
+</view>
+<view class='phonenumber' bindtap='show_iphone'>
+  <image class='phone' src='../../images/home_phone.png'></image>
+</view>

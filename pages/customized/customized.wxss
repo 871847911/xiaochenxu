@@ -1,0 +1,27 @@
+/* pages/paySuccess/paySuccess.wxss */
+@import "../../wxParse/wxParse.wxss";
+.submit {
+  width: 686rpx;
+  height: 98rpx;
+  background: #ec4b26;
+  border-radius: 8rpx;
+  font-size: 34rpx;
+  color: #fff;
+  line-height: 98rpx;
+  text-align: center;
+  position: fixed;
+  bottom: 24rpx;
+  left: 50%;
+  margin-left: -343rpx;
+}
+.contant{
+  text-align: center;
+  padding-bottom: 160rpx;
+}
+.WxEmojiView{
+  display: block;
+  padding: 16rpx 32rpx;
+  text-align: left;
+  text-indent: 32rpx;
+  font-size: 32rpx;
+}

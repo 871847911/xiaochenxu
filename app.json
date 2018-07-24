@@ -1,0 +1,80 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/first/first",
+    "pages/storedetails/storedetails",
+    "pages/serviceList/serviceList",
+    "pages/order/order",
+    "pages/technician/technician",
+    "pages/technicianDetails/technicianDetails",
+    "pages/hisService/hisService",
+    "pages/choseservice/choseservice",
+    "pages/orderSuccess/orderSuccess",
+    "pages/paySuccess/paySuccess",
+    "pages/personalCenter/personalCenter",
+    "pages/payfor/payfor",
+    "pages/brand/brand",
+    "pages/personMsg/personMsg",
+    "pages/personalInformation/personalInformation",
+    "pages/bindingPhoneNumber/bindingPhoneNumber",
+    "pages/coupon/coupon",
+    "pages/myReservation/myReservation",
+    "pages/myReservationList/myReservationList",
+    "pages/cancel/cancel",
+    "pages/serviceInOurShop/serviceInOurShop",
+    "pages/serviceDetails/serviceDetails",
+    "pages/technicianInShop/technicianInShop",
+    "pages/technicianDetailReservation/technicianDetailReservation",
+    "pages/customized/customized",
+    "pages/selectCoupons/selectCoupons"
+  
+
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "list": [
+      {
+        "pagePath": "pages/first/first",
+        "text": "首页",
+        "iconPath": "images/tab_home_selected.png",
+        "selectedIconPath": "images/tab_home_normal.png"
+      },
+      {
+        "pagePath": "pages/customized/customized",
+        "text": "品牌",
+        "iconPath": "images/tab_brand_normal.png",
+        "selectedIconPath": "images/tab_brand_selected.png"
+      },
+      {
+        "pagePath": "pages/technicianInShop/technicianInShop",
+        "text": "技师",
+        "iconPath": "images/tab_technician_normal.png",
+        "selectedIconPath": "images/tab_technician_selected.png"
+      }
+      ,
+      {
+        "pagePath": "pages/serviceInOurShop/serviceInOurShop",
+        "text": "服务",
+        "iconPath": "images/tab_serve_normal.png",
+        "selectedIconPath": "images/tab_serve_selected.png"
+      },
+      {
+        "pagePath": "pages/personalCenter/personalCenter",
+        "text": "我的",
+        "iconPath": "images/tab_me_normal.png",
+        "selectedIconPath": "images/tab_me_selected.png"
+      }
+      
+    ],
+    "backgroundColor": "#fff",
+    "selectedColor":"#EC4B26"
+    
+
+  }
+}
