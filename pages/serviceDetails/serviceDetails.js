@@ -1,6 +1,7 @@
 // pages/paySuccess/paySuccess.js
 var WxParse = require('../../wxParse/wxParse.js');
 var that = this;
+const app = getApp();
 Page({
 
   /**
@@ -41,8 +42,55 @@ Page({
    
   },
   gotoOrder: function () {
-    wx.navigateTo({
-      url: '../order/order?id=' + that.data.id + "&serviceName=" + that.data.name,
+    wx.request({
+      url: app.globalData.service + '/orderAppointment/queryAppointmentsByOpenid?' + 'openid=' + app.globalData.openid + '&status=' + '0' + '&storeId=' + app.globalData.storeId,
+      method: "POST",
+      header: {
+        'content-type': 'application/json'
+      },
+      data: {
+
+      },
+      success: function (res) {
+        console.log("预约信息", res.data)
+
+        if (res.data == '') {
+          wx.navigateTo({
+            url: '../order/order?id=' + that.data.id + "&serviceName=" + that.data.name,
+          })
+        } else {
+          var id = res.data[0].id
+          wx.showModal({
+            title: '提示',
+            content: '您已经预约了一次服务，是否需要重新预约？',
+            success: function (res) {
+              if (res.confirm) {
+                wx.request({
+                  url: app.globalData.service + '/orderAppointment/updateOrderAppointment',
+                  method: "POST",
+                  header: {
+                    'content-type': 'application/json'
+                  },
+                  data: {
+                    "cancelReason": "重新预约",
+                    "id": id,
+                    "status": 2
+                  },
+                  success: function (res) {
+                    console.log("取消结果", res);
+                    wx.navigateTo({
+                      url: '../order/order?id=' + that.data.id + "&serviceName=" + that.data.name,
+                    })
+                  }
+                })
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
+          })
+        }
+      }
     })
+    
   }
 })

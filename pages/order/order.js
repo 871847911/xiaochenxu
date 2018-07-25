@@ -58,7 +58,6 @@ Page({
           var data = res.data;
           // console.log(data.startTime.time.split(" "));
           var riqi = data.startTime.time.split(" ");
-          console.log("修改传值", riqi);
           that.setData({
             make: options.make,
             name: data.userName,
@@ -78,9 +77,6 @@ Page({
 
 
     } else {
-      console.log("options", options);
-
-      console.log("zzz");
       that.setData({
         serverId: options.id,
         serverName: options.serviceName,
@@ -165,7 +161,6 @@ Page({
     dayNum = e.currentTarget.dataset.id;
     var day = that.data.day;
     timesTodDay = day[e.currentTarget.dataset.id];
-    console.log()
     chosetimes = day[e.currentTarget.dataset.id] + ":00-" + Number(Number(day[e.currentTarget.dataset.id]) + 1) + ":00";
     console.log("...", chosetimes);
     this.setData({
@@ -221,12 +216,16 @@ Page({
       }
 
       var newTime = that.data.serviceDay[serviceDayNum].date + " " + that.data.day[dayNum] + ":00:00";
-      console.log("newTime", newTime);
-      var str = newTime.toString();
-      str = str.replace("/-/g", "/");
-      //// str =  str.replace("T"," "); 
-      var startTime = new Date(str);
-      console.log("startTime:", startTime)
+      // console.log("newTime", newTime);
+      // var str = newTime.toString();
+      // str = str.replace("/-/g", "/");
+      // //// str =  str.replace("T"," "); 
+      newTime = newTime.replace(/-/g, ':').replace(' ', ':');
+      newTime = newTime.split(':');
+      var newTime1 = new Date(newTime[0], (newTime[1] - 1), newTime[2], newTime[3], newTime[4], newTime[5]);
+      // console.log("newTime1" + newTime1);
+      // var startTime = new Date(newTime1);
+      console.log("startTime:", newTime1)
 
       wx.request({
         url: app.globalData.service + "/orderAppointment/addOrderAppointment",
@@ -245,7 +244,7 @@ Page({
           "serverName": that.data.serverName,
           "staffId": that.data.staffId,
           "staffName": that.data.jishiName,
-          "startTime": startTime,
+          "startTime": newTime1,
           "status": 0,
           "storeId": app.globalData.storeId,
           "userName": that.data.name,
@@ -403,6 +402,9 @@ Page({
   },
   //修改预约 /orderAppointment/updateOrderAppointment
   changeOrder: function () {
+    wx.showLoading({
+      title: '加载中',
+    })
     var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1})|(19[0-9]{1}))+\d{8})$/;
     if (that.data.name == "") { //姓名为空
       wx.showToast({
@@ -427,18 +429,23 @@ Page({
         icon: "none"
       })
     } else {
+      wx.showLoading({
+        title: '加载中',
+      })
       if (that.data.serverName == null) {
         that.setData({
           serverName: "不指定服务"
         })
       }
       var newTime = that.data.serviceDay[serviceDayNum].date + " " + that.data.day[dayNum] + ":00:00";
-      console.log("newTime", newTime);
-      var str = newTime.toString();
-      str = str.replace("/-/g", "/");
-      //// str =  str.replace("T"," "); 
-      var startTime = new Date(str);
-      console.log("startTime:", startTime)
+      // console.log("newTime", newTime);
+      // var str = newTime.toString();
+      // str = str.replace("/-/g", "/");
+      // //// str =  str.replace("T"," "); 
+      newTime = newTime.replace(/-/g, ':').replace(' ', ':');
+      newTime = newTime.split(':');
+      var newTime1 = new Date(newTime[0], (newTime[1] - 1), newTime[2], newTime[3], newTime[4], newTime[5]);
+      console.log("startTime", newTime1)
       wx.request({
         url: app.globalData.service + "/orderAppointment/updateOrderAppointment",
         method: "POST",
@@ -456,7 +463,7 @@ Page({
           "serverName": that.data.serverName,
           "staffId": that.data.staffId,
           "staffName": that.data.jishiName,
-          "startTime": startTime,
+          "startTime": newTime1,
           "status": 0,
           "storeId": app.globalData.storeId,
           "userName": that.data.name,
@@ -467,7 +474,7 @@ Page({
         },
         success: function (res) {
           console.log("========>", chosetimes)
-
+          wx.hideLoading()
           console.log("修改预订", res);
           wx.redirectTo({
             url: '../orderSuccess/orderSuccess?customerNumber=' + that.data.customerNumber + "&userName=" + that.data.name + "&phone=" + that.data.phone + "&staffName=" + that.data.jishiName + "&isAcceptStaffs=" + that.data.isAcceptStaffs + "&serverName=" + that.data.serverName + "&year=" + that.data.serviceDay[serviceDayNum].date + "&week=" + that.data.serviceDay[serviceDayNum].week + "&chosetimes=:" + chosetimes,

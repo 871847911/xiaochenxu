@@ -9,11 +9,12 @@
     </view>
     <view class='textBox'>
       <text class='text_l'>预约人信息</text>
-      <text class='text_r'>姓名 {{userName}}</text>
+      <text class='text_r'>{{userName}} {{phone}}</text>
     </view>
     <view class='textBox'>
       <text class='text_l'>预约技师</text>
-      <text class='text_r'>{{staffName}}</text>
+      <text class='text_r' wx:if="{{isAcceptStaffs==0}}">{{staffName}}</text>
+      <text class='text_r' wx:else>{{staffName}}（接受非指定技师服务）</text>
     </view>
     <view class='textBox'>
       <text class='text_l'>预约服务</text>

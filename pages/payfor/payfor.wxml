@@ -12,7 +12,7 @@
   </view>
 </view>
 <view class='money_text'>
-  本次消费总金额 {{price}}（元）
+  本次消费总金额 （元）
 </view>
 <input class='pay_num' value='{{price}}' placeholder-class="phcolor" placeholder='0.00' type="digit" maxlength='6' bindinput='biNum'></input>
 <view class='tip'>
@@ -34,9 +34,9 @@
 </view>
 <view class='jifen' wx:if="{{isenableIntegral==1}}">
   <view class='now_text'>
-    当前{{integral}}积分
+    <view class='dangqian'>当前{{integral}}积分</view>
     <view class='use_num'>
-      使用积分
+      <view class='usejifen'>使用积分</view>
       <switch class='use_sw' bindchange='switchChange' color='rgba(236,75,38,1)'></switch>
     </view>
   </view>

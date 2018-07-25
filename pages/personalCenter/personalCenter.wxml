@@ -23,6 +23,6 @@
       <view class='num'>{{integral}}积分</view>
     </view>
   </view>
-  <view class='company'>微动征程信息提供技术支持</view>
+  <view class='company'>微动天下提供技术支持</view>
  
 </view>

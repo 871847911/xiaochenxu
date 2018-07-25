@@ -31,6 +31,7 @@ Page({
    * 生命周期函数--监听下拉
    */
   onPullDownRefresh: function () {
+    this.getJifen()
     this.setData({
       avatarUrl: app.globalData.avatarUrl,
       nickName: app.globalData.nickName,
@@ -54,6 +55,7 @@ Page({
         pageNo: 1,
       },
       success: function (res) {
+        console.log(res)
         if (res.data.list == '') {
           that.setData({
             integral: 0

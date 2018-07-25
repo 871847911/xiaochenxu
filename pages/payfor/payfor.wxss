@@ -50,11 +50,9 @@
   width: 14rpx;
 }
 .money_text{
-  height: 102rpx;
   font-size:30rpx;
-  margin-left: 32rpx;
-  margin-top: 48rpx;
   font-weight: bold;
+  margin: 48rpx 0 24rpx 32rpx; 
 }
 .pay_num{
   padding-left: 32rpx;
@@ -100,59 +98,53 @@ color:rgba(241,161,142,1);
   height: 26rpx;
 }
 .jifen{
+background:rgba(255,255,255,1);
+ position: relative;
+ padding: 32rpx 32rpx;
+ border-top:2rpx solid rgba(242,242,242,1);
+  border-bottom:2rpx solid rgba(242,242,242,1);
   margin-top: 20rpx;
-  height: 120rpx;
-  background:rgba(255,255,255,1);
-  border:2rpx solid rgba(242,242,242,1);
-  padding-left: 32rpx;
-  font-size: 30rpx;
-  display: flex;
-  flex-direction: column;
-  padding-top: 30rpx;
-  position: relative;
+}
+.dangqian{
+  float: left;
 }
 .jfien_bot{
   position: absolute;
   left: 32rpx;
-  bottom: -58rpx;
+  bottom: -50rpx;
   font-size:24rpx;
 color:rgba(236,75,38,1);
 }
 .now_text{
-  padding-right: 32rpx;
- height: 50rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  line-height: 50rpx;
-  text-align: center;
+ overflow: hidden;
+ font-size: 30rpx;
+ color:rgba(30,30,30,1);
+}
+.usejifen{
+  display: inline-block;
+  vertical-align: middle
 }
 .use_sw{
  margin-left: 34rpx;
 }
 .use_num{
-  height: 48rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+ float: right;
 }
 .use_sw{
   padding-bottom: 2rpx;
   margin-bottom: 8rpx;
 }
 .jifen_tip{
-  margin-top: 12rpx;
   font-size:24rpx;
 
 color:rgba(119,119,119,1);
 }
 .pay_type_text{
-  padding-top: 65rpx;
+  padding-top: 48rpx;
   padding-left: 32rpx;
-height: 56rpx;
-font-weight: bold;
-font-size: 30rpx;
+  height: 56rpx;
+  font-weight: bold;
+  font-size: 30rpx;
 }
 .pay_type{
   padding-right: 32rpx;

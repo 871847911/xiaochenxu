@@ -52,7 +52,6 @@ Page({
   },
   radioChange: function(e) {
     var that = this
-    console.log('radio发生change事件，携带value值为：', e.detail.value)
     if (e.detail.value == "4") {
       this.setData({
         isShow: true,

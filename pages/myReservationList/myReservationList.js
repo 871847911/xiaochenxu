@@ -59,6 +59,8 @@ Page({
           serverName: res.data.serverName,
           cancelReason: res.data.cancelReason,
           startTime: res.data.startTime.time,
+          phone:res.data.phone,
+          isAcceptStaffs: res.data.isAcceptStaffs
         })
       }
     });

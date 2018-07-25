@@ -23,7 +23,7 @@
     </block>
     <view class='more' wx:if="{{skill.length >= 6}}"  bindtap='gohisService'>...</view>
   </view>
-  <view class='hisService' bindtap='gohisService'>他的服务 
+  <view class='hisService' bindtap='gohisService'>TA的服务 
     <image class='more_go'  src='../../images/enter_btn.png'>go</image>
   </view>
   <view class='jieshao'>

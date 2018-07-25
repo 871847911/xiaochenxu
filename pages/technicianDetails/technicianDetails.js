@@ -45,12 +45,59 @@ Page({
     })
   },
   addorder:function(){
-    var id = this.data.listd.id;
-    var jishiName = this.data.listd.nickName;
-    console.log(id)
-    wx.navigateTo({
-      url: '../order/order?staffId=' + id + "&jishiName=" + jishiName,
+    var that = this
+    
+    wx.request({
+      url: app.globalData.service + '/orderAppointment/queryAppointmentsByOpenid?' + 'openid=' + app.globalData.openid + '&status=' + '0' + '&storeId=' + app.globalData.storeId,
+      method: "POST",
+      header: {
+        'content-type': 'application/json'
+      },
+      data: {
+
+      },
+      success: function (res) {
+        console.log("预约信息", res.data)
+        var id = that.data.listd.id;
+        var jishiName = that.data.listd.nickName;
+        if (res.data == '') {
+          wx.navigateTo({
+            url: '../order/order?staffId=' + id + "&jishiName=" + jishiName,
+          })
+        } else {
+          var id = res.data[0].id
+          wx.showModal({
+            title: '提示',
+            content: '您已经预约了一次服务，是否需要重新预约？',
+            success: function (res) {
+              if (res.confirm) {
+                wx.request({
+                  url: app.globalData.service + '/orderAppointment/updateOrderAppointment',
+                  method: "POST",
+                  header: {
+                    'content-type': 'application/json'
+                  },
+                  data: {
+                    "cancelReason": "重新预约",
+                    "id": id,
+                    "status": 2
+                  },
+                  success: function (res) {
+                    console.log("取消结果", res);
+                    wx.navigateTo({
+                      url: '../order/order?staffId=' + id + "&jishiName=" + jishiName,
+                    })
+                  }
+                })
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
+          })
+        }
+      }
     })
+    
   },
   //通过id查询技师详情
   getTechnicianDetails(id) {

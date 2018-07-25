@@ -24,7 +24,6 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-    
     wx.request({
       url: app.globalData.service + "/seller/queryById?sellerId=" + app.globalData.sellerId,
       method: "POST",
@@ -42,12 +41,12 @@ Page({
         });
       }
     })
-    var zhekou  
+    var zhekou = 0
     if (options.priceRules === undefined || options.priceid === undefined || options.priceRules == '' || options.priceid == '') {
       if (options.price == '' || options.price === undefined){
         that.setData({
           price: '',
-          rellprice: 0.00,
+          rellprice: '0.00',
           lastPrice:0.00
         });
       }else{
@@ -71,10 +70,11 @@ Page({
         zhekou = (options.price - rellprice).toFixed(2)
       }
       if (rellprice <= 0) {
+        console.log(rellprice)
         that.setData({
           zhekou: zhekou,
           lastPrice: 0.00,
-          rellprice: 0.00,
+          rellprice: "0.00",
           priceid: options.priceid,
         });
       } else {
@@ -207,7 +207,6 @@ Page({
         })
         
       } else {
-        
         var rellprice = Number(parseInt(that.data.rellprice*100))
         wx.showLoading({
           title: '加载中',
@@ -252,11 +251,29 @@ Page({
                     if (kowprice== ''){
                       kowprice = 0
                     }
-                    var rellprice2 = rellprice/100
+                    var rellprice2 = (Number(that.data.rellprice)).toFixed(2)
                     var priceRules = that.data.priceRules
                     if (priceRules=="选择优惠券"){
                       priceRules = 0
                     }
+                    console.log("实际支付金额", rellprice2)
+                    console.log("优惠券减免", priceRules)
+                    console.log("积分减免", kowprice)
+                    console.log("原金额", that.data.price)
+                    wx.request({
+                      url: app.globalData.service + "/integral/paymentReturnAdd?merchantId=" + app.globalData.sellerId + "&userId=" + app.globalData.userId + "&price=" + rellprice2,
+                      method: "POST",
+                      header: {
+                        'content-type': 'application/json'
+                      },
+                      data: {
+
+
+                      },
+                      success: function (res) {
+                        console.log("积分返还", res);
+                      }
+                    })
                     wx.request({
                       url: app.globalData.service + "/orderPayment/addOrderPayment",
                       method: "POST",
@@ -382,9 +399,10 @@ Page({
         merchantId: app.globalData.sellerId,
       },
       success: function (res) {
-        console.log("获取积分规则", res.data.integralCounterPrice);
+        console.log("获取积分规则", res.data.integralPaymentReturn);
         that.setData({
           integralCounterPrice: res.data.integralCounterPrice,
+          integralPaymentReturn: res.data.integralPaymentReturn,
         });
 
       }
@@ -446,6 +464,7 @@ Page({
     } else {
       var lastPrice = Number(that.data.lastPrice).toFixed(2)
       that.setData({
+        kou:'',
         switchChange: false,
         rellprice: lastPrice
       })

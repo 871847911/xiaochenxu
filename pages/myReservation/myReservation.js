@@ -31,7 +31,6 @@ Page({
       success: function(res) {
         console.log("我的预约",res.data)
         for (var i = 0; i < res.data.length; i++) {
-          console.log(res.data[i].startTime.time)
           if (res.data[i].startTime!= '') {
             res.data[i].startTime.time = that.toDate(res.data[i].startTime.time) + ' ' + res.data[i].startTime.hours + ':00' + '-' + (res.data[i].startTime.hours + 1) + ':00' + '  ' + that.dateLater(that.toDate(res.data[i].startTime.time)).week
           }
