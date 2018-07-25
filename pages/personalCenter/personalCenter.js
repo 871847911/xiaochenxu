@@ -51,7 +51,7 @@ Page({
       data: {
         userId: app.globalData.userId,
         merchantId: app.globalData.sellerId,
-        pageSize: 100,
+        pageSize: 1,
         pageNo: 1,
       },
       success: function (res) {

@@ -32,7 +32,7 @@ Page({
       wx.getExtConfig({
         success: function (res) {
           //获取商户信息
-          app.globalData.sellerId = 2
+          app.globalData.sellerId = res.extConfig.sellerId
           that.getStoreMsg(res.extConfig.sellerId);
         }
       })

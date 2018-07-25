@@ -83,7 +83,7 @@ Page({
     });
     console.log('修改预约返回参数', that.data.dataList)
     wx.navigateTo({
-      url: '../order/order?make=1',
+      url: '../order/order?make=1&id=' + that.data.dataList.id,
     })
   },
   /**

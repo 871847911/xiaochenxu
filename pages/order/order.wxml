@@ -36,7 +36,7 @@
 
   <view class='choseBox'>
   <view class='check_text'>允许非指定技师为您服务</view>
-      <checkbox class='check' bindtap='change' checked='true'></checkbox>
+      <checkbox class='check' bindtap='change'checked="{{isAcceptStaffs ==1 ?true:false}}" ></checkbox>
       
   </view>
   

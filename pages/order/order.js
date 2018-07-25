@@ -70,7 +70,8 @@ Page({
             year: riqi[0],
             week: riqi[3],
             chosetimes: riqi[1],
-            isAcceptStaffs: data.isAcceptStaffs
+            isAcceptStaffs: data.isAcceptStaffs,
+            customerNumber: data.customerNumber
           })
         },
       })
@@ -127,7 +128,7 @@ Page({
         showModalStatus: true,
         year: that.data.serviceDay[0].date,
         week: that.data.serviceDay[0].week,
-        chosetimes: chosetimes
+        // chosetimes: chosetimes
       });
     }
     setTimeout(function () {
@@ -214,7 +215,9 @@ Page({
           serverName: "不指定服务"
         })
       }
-
+      wx.showLoading({
+        title: '加载中',
+      })
       var newTime = that.data.serviceDay[serviceDayNum].date + " " + that.data.day[dayNum] + ":00:00";
       // console.log("newTime", newTime);
       // var str = newTime.toString();
@@ -254,7 +257,7 @@ Page({
         },
         success: function (res) {
           console.log("========>", chosetimes)
-
+          wx.hideLoading()
           console.log("预订", res);
           wx.redirectTo({
             url: '../orderSuccess/orderSuccess?customerNumber=' + that.data.customerNumber + "&userName=" + that.data.name + "&phone=" + that.data.phone + "&staffName=" + that.data.jishiName + "&isAcceptStaffs=" + that.data.isAcceptStaffs + "&serverName=" + that.data.serverName + "&year=" + that.data.serviceDay[serviceDayNum].date + "&week=" + that.data.serviceDay[serviceDayNum].week + "&chosetimes=:" + chosetimes,
@@ -271,6 +274,7 @@ Page({
     console.log("form发生了submit事件", e)
   },
   change: function (e) {
+    console.log("change", e)
 
     count = count + 1
     if (count % 2 == 1) {
@@ -278,11 +282,13 @@ Page({
       that.setData({
         isAcceptStaffs: 0
       })
+      console.log("isAcceptStaffs", that.data.isAcceptStaffs);
     } else {
       console.log("change", 1); //可以接受非指定技师服务
       that.setData({
         isAcceptStaffs: 1
       })
+      console.log("isAcceptStaffs", that.data.isAcceptStaffs);
     }
 
   },
@@ -469,7 +475,8 @@ Page({
           "userName": that.data.name,
           "storeName": app.globalData.storeName,
           "openid": app.globalData.openid,
-          id: changeId
+          "id": changeId,
+          "modifyStartTime":new Date()
 
         },
         success: function (res) {
