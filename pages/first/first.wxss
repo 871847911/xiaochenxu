@@ -13,13 +13,22 @@
   display: flex;
   flex-direction: row;
   font-size: 26rpx;
-  padding-left: 31rpx;
-  padding-right: 31rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
   padding-bottom: 32rpx;
   background: rgba(255, 255, 255, 1);
   border: 1px solid rgba(232, 232, 236, 1);
+  position: relative;
 }
+.line{
+  width: 2rpx;
+  height: 90rpx;
+  background: rgba(232,232,236,1);
+  position: absolute;
+  left:501rpx;
+  top:52rpx;
 
+}
 .store_name {
   width: 450rpx;
   white-space: nowrap;
@@ -46,8 +55,9 @@
   /* display: flex;
   flex-direction: column;
  justify-content: space-between; */
-  margin-top: 8rpx;
-  margin-left: 86rpx;
+  padding-top: 8rpx;
+  padding-left: 86rpx;
+  float: right;
 }
 
 .far {
@@ -61,12 +71,13 @@
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  margin-left: 36rpx;
+  padding-left: 36rpx;
 }
 
 .enter {
   height: 26rpx;
   width: 14rpx;
+  vertical-align: middle;
 }
 
 
@@ -75,7 +86,7 @@
   width: 332rpx;
   height: 94rpx;
   background: rgba(43, 169, 111, 1);
-  border-radius: 8px;
+  border-radius: 8rpx;
   color: #fff;
   font-size: 30rpx;
   display: flex;
@@ -95,7 +106,7 @@
   width: 332rpx;
   height: 94rpx;
   background: rgba(255, 150, 0, 1);
-  border-radius: 8px;
+   border-radius: 8rpx;
   color: #fff;
   font-size: 30rpx;
   display: flex;

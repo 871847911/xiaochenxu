@@ -61,7 +61,7 @@
   border:1rpx solid rgba(232,232,236,1);
   font-size:96rpx;
 font-family:PingFangSC-Regular;
-color:rgba(241,161,142,1);
+color:rgba(236,75,38,1);
 }
 .tip{
   padding-left: 32rpx;

@@ -314,7 +314,7 @@ Page({
   },
   //点击领取动作
   onClilk: function (e) {
-
+    console.log(e)
     var couponId = that.data.couponList[e.currentTarget.dataset.id].id;
     var type = that.data.couponList[e.currentTarget.dataset.id].type;
     console.log("领取", type, couponId, app.globalData.userId);

@@ -19,11 +19,11 @@
       <view class="mainBox"  hidden="{{page.staff.isEnable==0}}">
         <!-- 技师信息 -->
         <view class='header'>
-          <view class="weui-cell">
-            <view class="weui-cell__hd" style="position: relative;margin-right: 32rpx;" data-index='{{index}}' bindtap='gohisService'>
+          <view class="weui-cell" >
+            <view class="weui-cell__hd" style="position: relative;padding-right: 32rpx;" data-index='{{index}}' bindtap='gohisService'>
               <image src="{{page.staff.headUrl}}"  style="width: 128rpx; height:128rpx; display: block;border-radius:50%;" />
             </view>
-            <view class="weui-cell__bd">
+            <view class="weui-cell__bd" data-index='{{index}}' bindtap='gohisService'>
               <view class='name'>{{page.staff.nickName}}</view>
               <view style="font-size: 26rpx;color: #777777;margin-top: 10rpx;">{{page.staff.staffTypeName}}</view>
             </view>
