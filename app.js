@@ -26,7 +26,7 @@ App({
                                                                                                
   globalData: {
     userInfo: null,
-    appid: "wx75636d6678ab478b",
+    appid: "",
     service: "https://sphz.vdongchina.com/api",
     openid:"",
     avatarUrl:"",
@@ -46,6 +46,7 @@ App({
     mapAdress:'',
     isenableIntegral:'',
     zphone:'',
-    callphone:''
+    callphone:'',
+    pinpai:''
   }
 })

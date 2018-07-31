@@ -58,6 +58,7 @@ Page({
         if (res.data == '') {
 
         } else {
+          app.globalData.pinpai = res.data.name
           wx.setNavigationBarTitle({
             title: res.data.name
           })
@@ -65,6 +66,7 @@ Page({
 
       }
     })
+    
 
   },
   //获取位置信息
@@ -196,6 +198,10 @@ Page({
 
   //访客记录
   addUserLog: function () {
+    console.log(app.globalData.nickName)
+    console.log(app.globalData.openid)
+    console.log(app.globalData.sellerId)
+    console.log(Date.parse(new Date()))
     wx.request({
       url: app.globalData.service + "/userLog/addUserLog",
       method: "PUT",

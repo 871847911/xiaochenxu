@@ -19,7 +19,7 @@ Page({
    */
   onLoad: function (options) {
     that = this;
-    this.wxLogin();
+    
     //获取个人信息
     if (app.globalData.userInfo) {
       this.setData({
@@ -34,6 +34,24 @@ Page({
           //获取商户信息
           app.globalData.sellerId = res.extConfig.sellerId
           that.getStoreMsg(res.extConfig.sellerId);
+          var sellerId = res.extConfig.sellerId
+          //商户信息
+          wx.request({
+            url: app.globalData.service + "/seller/queryById?sellerId=" + res.extConfig.sellerId,
+            method: "POST",
+            header: {
+              'content-type': 'application/json'
+            },
+            data: {
+
+
+            },
+            success: function (res) {
+              console.log("商户信息", res.data);
+              app.globalData.appid = res.data.appId;
+              that.wxLogin(sellerId);
+            }
+          })
         }
       })
     }
@@ -58,16 +76,17 @@ Page({
 
   },
   //微信登录
-  wxLogin: function () {
+  wxLogin: function (sellerId) {
     wx.login({
       success: function (res) {
-        console.log("code", res.code);
-        that.getOpid(res.code);
+        that.getOpid(res.code, sellerId);
       }
     })
   },
   //获取微信opID
-  getOpid: function (code) {
+  getOpid: function (code, sellerId) {
+    console.log("sellerId", sellerId)
+    console.log("code", code)
     wx.request({
       url: app.globalData.service + "/wx/getUserOpenId",
       method: "GET",
@@ -75,11 +94,12 @@ Page({
         'content-type': 'application/json'
       },
       data: {
-        appid: app.globalData.appid,
+        sellerId: sellerId,
         code: code
 
       },
       success: function (res) {
+        console.log("oppenid",res)
         console.log("opid", res.data.openid);
         app.globalData.openid = res.data.openid;
         opid = app.globalData.openid;

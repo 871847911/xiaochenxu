@@ -127,7 +127,7 @@ Page({
                   "Accept": "*/*",
                 },
                 data: {
-                  "content": app.globalData.storeName,
+                  "content": app.globalData.pinpai,
                   "merchantId": app.globalData.sellerId,
                   "phones": [
                     phone
