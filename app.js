@@ -27,7 +27,7 @@ App({
   globalData: {
     userInfo: null,
     appid: "",
-    service: "https://sphz.vdongchina.com/api",
+    service: "https://meiye-hz.vdongchina.com/api",
     openid:"",
     avatarUrl:"",
     nickName:"",

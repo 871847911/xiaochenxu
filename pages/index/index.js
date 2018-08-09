@@ -31,6 +31,7 @@ Page({
     if (wx.getExtConfig) {
       wx.getExtConfig({
         success: function (res) {
+          console.log(res)
           //获取商户信息
           app.globalData.sellerId = res.extConfig.sellerId
           that.getStoreMsg(res.extConfig.sellerId);

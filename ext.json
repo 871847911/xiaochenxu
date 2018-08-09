@@ -1,9 +1,7 @@
 {
-   "extEnable": true,
-  
+  "extEnable": true,
+  "extAppid": "",
   "ext": {
-    
-      "sellerId":7
-    
+    "sellerId": 6
   }
 }
